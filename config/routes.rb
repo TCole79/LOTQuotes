@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   get "/quotes", to: "quotes#index"
 
 
+  
+  get "/about", to: "about#index"
+
+  
+  get "/favourites", to: "favourites#index"
+
+ 
+  get "/new_quote", to: "new_quote#index"
 end
