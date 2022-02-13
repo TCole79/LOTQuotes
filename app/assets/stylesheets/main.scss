@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// custom fonts
+@font-face {
+  font-family: "Moria";
+  src: url("MoriaScript.ttf");
+}
+@font-face {
+  font-family: "Dwarvish";
+  src: url("Dwarvish.ttf");
+}
+
+h1 {
+  font-family: "Moria";
+}
+
+h1:hover {
+  font-family: "Dwarvish"
+}
