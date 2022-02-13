@@ -12,9 +12,61 @@
 }
 
 h1 {
-  font-family: "Moria";
+  font-family: "English";
 }
 
 h1:hover {
   font-family: "Dwarvish"
 }
+
+.generate-button {
+  display:flex;
+  justify-content: center;
+}
+
+.generate-button:hover {
+  
+  font-family:"Dwarvish",
+}
+
+.main-ring {
+  display:flex;
+  justify-content: center;
+}
+.rotate {
+  
+  width: 700px; 
+  filter: hue-rotate(0deg);
+  transition: filter 5s ease-in-out;
+  animation: rotation 40s infinite linear;
+}
+
+.rotate:hover {
+  filter:hue-rotate(180deg);
+  transition: filter 5s ease-in-out;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotate2 {
+  
+  width: 700px; 
+  filter: hue-rotate(50deg);
+  animation: rotation 40s infinite linear;
+}
+
+.rotate3 {
+  
+  width: 700px; 
+  filter: hue-rotate(300deg);
+  animation: rotation 40s infinite linear;
+}
+
