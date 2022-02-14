@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "/new_quote", to: "new_quote#index"
 
+  
   resources :users
 
   get "/sign_up", to: "registrations#new"

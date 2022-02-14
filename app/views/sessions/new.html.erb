@@ -2,16 +2,18 @@
 
 <div class="main-ring">
 <img id="image" class="rotate3" src="<%= asset_path('ring2.png') %>" >
-  <div>
-    <%= form_with url: sign_in_path do |f| %>
+  <div class="centered">
+    <div>
+      <%= form_with url: sign_in_path do |f| %>
 
-      <%= f.label :Email %>
-      <%= f.text_field :email %>
+        <%= f.label :Email %>
+        <%= f.text_field :email %>
 
-      <%= f.label :Password %>
-      <%= f.password_field :password %>
+        <%= f.label :Password %>
+        <%= f.password_field :password %>
 
-      <%= f.submit "Sign in" %>
-    <% end %>
-  </div>
+        <%= f.submit "Sign in" %>
+      <% end %>
+    </div>
+  </div>  
 </div>

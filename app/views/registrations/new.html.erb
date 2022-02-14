@@ -1,24 +1,27 @@
-<h1>Sign Up</h1>
+<h1>Registration</h1>
 
 <div class="main-ring">
 <img id="image" class="rotate3" src="<%= asset_path('ring2.png') %>" >
-  <div>
-    <%= form_with model: @user, url: sign_up_path do |f|  %>
-      
-      <%= f.label :username %>
-      <%= f.text_field :user_name %>
-      
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+  <div class="centered">
+    <div>
+      <%= form_with model: @user, url: sign_up_path do |f|  %>
+        
+        <%= f.label :username %>
+        <%= f.text_field :name %>
+        
+        <%= f.label :email %>
+        <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Sign Up" %>
-    <% end %>
-  </div>
+        <%= f.submit "Sign Up" %>
+      <% end %>
+    </div>
+  </div>  
+
 </div>
 
