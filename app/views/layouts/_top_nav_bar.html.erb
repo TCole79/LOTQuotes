@@ -12,8 +12,8 @@
   <div>
   <ul class="nav navbar-nav">
     <% if Current.user %>
-      Logged in as: Current.user.email<br>
-      <%= button_to "Sign Out", logout_path,  method: :delete %>
+      Logged in as: <%= Current.user.name %><br>
+      <%= button_to "Sign Out", log_out_path, method: :get %>
       <% else %>
       <%= link_to "Sign up", sign_up_path %>
       <%= link_to "Sign In", sign_in_path %>

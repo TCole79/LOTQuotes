@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
   post "/sign_in", to: "sessions#create"
-  get "/logout", to: "sessions#destroy"
+  get "/log_out", to: "sessions#destroy"
 
 
 end
