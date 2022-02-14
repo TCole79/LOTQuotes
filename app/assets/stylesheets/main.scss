@@ -24,28 +24,36 @@ h1:hover {
   justify-content: center;
 }
 
-.generate-button:hover {
-  
+.generate-button:hover {  
   font-family:"Dwarvish",
 }
 
+// custom class for the spinning ring
 .main-ring {
   display:flex;
   justify-content: center;
 }
-.rotate {
-  
-  width: 700px; 
-  filter: hue-rotate(0deg);
-  transition: filter 5s ease-in-out;
-  animation: rotation 40s infinite linear;
-}
+  .rotate {  
+    width: 700px; 
+    filter: hue-rotate(0deg);
+    transition: filter 5s ease-in-out;
+    animation: rotation 40s infinite linear;
+  }
+  .rotate2 {  
+    width: 700px; 
+    filter: hue-rotate(50deg);
+    animation: rotation 40s infinite linear;
+  }
 
-.rotate:hover {
-  filter:hue-rotate(180deg);
-  transition: filter 5s ease-in-out;
-}
-
+  .rotate3 {  
+    width: 700px; 
+    filter: hue-rotate(300deg);
+    animation: rotation 40s infinite linear;
+  }
+  .rotate:hover {
+    filter:hue-rotate(180deg);
+    transition: filter 5s ease-in-out;
+  }
 
 @keyframes rotation {
   from {
@@ -56,17 +64,66 @@ h1:hover {
   }
 }
 
-.rotate2 {
-  
-  width: 700px; 
-  filter: hue-rotate(50deg);
-  animation: rotation 40s infinite linear;
+// custom settings for the About Page content
+.about {
+  display:flex;
+  justify-content: center;
+  //flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+}
+  .about-button {
+    display:flex;
+    justify-content: center;
+  }
+  .about-button:hover {  
+    font-family:"Moria",
+  }
+
+// Container holding the About image and the text //
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.rotate3 {
-  
-  width: 700px; 
-  filter: hue-rotate(300deg);
-  animation: rotation 40s infinite linear;
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: black;
 }
 
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: black;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: black;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: black;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+} 
