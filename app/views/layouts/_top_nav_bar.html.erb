@@ -10,7 +10,7 @@
     <li><%= link_to 'Favourites',  [:favourites] %></li>
     <li><%= link_to 'Create Quote',  [:new_quote] %></li>
   <div>
-  <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav">
     <% if Current.user %>
       Logged in as: Current.user.email<br>
       <%= button_to "Sign Out", logout_path,  method: :delete %>
