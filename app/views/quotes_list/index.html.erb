@@ -1,0 +1,10 @@
+<div id="quotes">
+  <% @quotes.each do |quote| %>
+    <%= render quote %>
+    <p> 
+      <%= link_to "Show this quote", quote %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New quote", new_quote_path %>

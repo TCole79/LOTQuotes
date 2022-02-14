@@ -19,6 +19,7 @@ class QuotesController < ApplicationController
   def edit
   end
 
+
   # POST /quotes or /quotes.json
   def create
     @quote = Quote.new(quote_params)
