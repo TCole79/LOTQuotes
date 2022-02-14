@@ -1,9 +1,14 @@
 class SessionsController < ApplicationController
+  
+  def index
+  end
+  
   def new
+    @user = User.new
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    @user = User.find_by(email: params[:email])
 
     if user.present? && user.authenticate(params[:password])
        session[:user_id] = user.id
