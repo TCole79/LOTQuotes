@@ -10,7 +10,14 @@
     <li><%= link_to 'Favourites',  [:favourites] %></li>
     <li><%= link_to 'Create Quote',  [:new_quote] %></li>
   <div>
-
+  <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
+      <li class="navbar-text"><%= current_user.email %></li>
+      <li><%= link_to "Logout", '/logout' %></li>
+    <% else %>
+      <li><%= link_to 'Login', '/login' %></li>
+      <li><%= link_to 'Signup', '/signup' %></li>
+  </ul>
 
 
 </nav>
