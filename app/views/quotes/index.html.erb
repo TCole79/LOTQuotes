@@ -1,18 +1,14 @@
+<p style="color: green"><%= notice %></p>
 
-<h1>What has Middle Earth been saying? </h1>
+<h1>Quotes</h1>
 
-
-<div class="main-ring">
-<img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
+<div id="quotes">
+  <% @quotes.each do |quote| %>
+    <%= render quote %>
+    <p>
+      <%= link_to "Show this quote", quote %>
+    </p>
+  <% end %>
 </div>
-<br/> 
-<br/>
-<div class="generate-button">
-<%= link_to "Generate Quote!", root_path, class: 'btn btn-lg btn-primary' %>
-</div>
-<br/>
-<br/>
 
-<h1>Quotes#index</h1>
-<p>Find me in app/views/quotes/index.html.erb</p>
-<h1>Test text for LOTQuotes!</h1>
+<%= link_to "New quote", new_quote_path %>

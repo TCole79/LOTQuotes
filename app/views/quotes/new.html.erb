@@ -1,0 +1,16 @@
+<h1>New quote</h1>
+
+
+<div class="main-ring">
+<img class="rotate3" src="<%= asset_path('ring2.png') %>" >
+
+
+</div>
+
+<%= render "form", quote: @quote %>
+
+<br>
+
+<div>
+  <%= link_to "Back to quotes", quotes_path %>
+</div>
