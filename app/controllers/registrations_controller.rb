@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+  
   def new
     user = User.new
   end
@@ -7,10 +8,10 @@ class RegistrationsController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      session[:user_id] = @user.id
+      session[:user_id] = user.id
       redirect_to root_path
       else
-        redirect_to '/signup' 
+        redirect_to "/signup" 
     end
   end
 

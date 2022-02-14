@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
-  get 'registrations/new'
+ 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -17,8 +14,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get "/sign_up", to: "users#new"
-  post "/sign_up", to: "users#create"
+  get "/sign_up", to: "registrations#new"
+  post "/sign_up", to: "registrations#create"
 
   get "/sign_in", to: "sessions#new"
   post "/sign_in", to: "sessions#create"
