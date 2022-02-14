@@ -8,9 +8,9 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to '/', success: "Your account was successfully created!"
     else
-      redirect_to '/sign_up'
+      redirect_to '/sign_up', danger: "information missing"
     end
   end
 
