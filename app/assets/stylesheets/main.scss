@@ -45,11 +45,7 @@ h1:hover {
     animation: rotation 40s infinite linear;
   }
 
-  .rotate3 {  
-    width: 700px; 
-    filter: hue-rotate(300deg);
-    animation: rotation 40s infinite linear;
-  }
+  
   .rotate:hover {
     filter:hue-rotate(180deg);
     transition: filter 5s ease-in-out;
@@ -127,3 +123,25 @@ h1:hover {
   transform: translate(-50%, -50%);
   color: black;
 } 
+
+.create-form {
+   display:flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 42%;
+}
+.rotate3 {  
+    width: 900px; 
+    filter: hue-rotate(310deg);
+    animation: rotation 60s infinite linear;
+    position:absolute;
+
+  }
+.main-ring2 {
+
+  display:flex;
+  justify-content: center;
+ 
+}
+

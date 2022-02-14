@@ -10,6 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema[7.0].define(version: 2022_02_14_010621) do
+  create_table "quotes", force: :cascade do |t|
+    t.string "quote_content"
+    t.string "quote_author"
+    t.string "quote_image"
 ActiveRecord::Schema[7.0].define(version: 2022_02_14_025950) do
   create_table "users", force: :cascade do |t|
     t.string "name"
