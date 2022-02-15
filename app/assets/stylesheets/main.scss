@@ -10,6 +10,16 @@
   font-family: "Dwarvish";
   src: url("Dwarvish.ttf");
 }
+/*
+body {
+  background-image: url('background1.jpg');
+  background-repeat: no-repeat;
+  object-fit: fill;
+  min-width: 100%;
+  min-height: 100%;
+  backdrop-filter: blur(2px)
+}
+*/
 
 h1 {
   font-family: "English";
@@ -34,21 +44,21 @@ h1:hover {
   justify-content: center;
 }
   .rotate {  
-    width: 700px; 
+    width: 800px; 
     filter: hue-rotate(0deg);
-    transition: filter 5s ease-in-out;
-    animation: rotation 40s infinite linear;
+    transition: filter 30s ease-in-out;
+    animation: rotation 120s infinite linear;
   }
   .rotate2 {  
     width: 700px; 
     filter: hue-rotate(50deg);
-    animation: rotation 40s infinite linear;
+    animation: rotation 120s infinite linear;
   }
 
   
   .rotate:hover {
-    filter:hue-rotate(180deg);
-    transition: filter 5s ease-in-out;
+    filter:hue-rotate(1079deg);
+    transition: filter 30s ease-in-out;
   }
 
 @keyframes rotation {
@@ -56,7 +66,7 @@ h1:hover {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(1079deg);
   }
 }
 
@@ -129,19 +139,24 @@ h1:hover {
   justify-content: center;
   position: absolute;
   z-index: 1;
-  top: 42%;
+  top: 50%;
 }
 .rotate3 {  
     width: 900px; 
-    filter: hue-rotate(310deg);
-    animation: rotation 60s infinite linear;
+    filter: hue-rotate(330deg);
+    animation: rotation 120 s infinite linear;
     position:absolute;
 
   }
 .main-ring2 {
-
   display:flex;
   justify-content: center;
- 
 }
-
+/*
+.new-body {
+  background-image: url('background6.jpeg');
+  background-repeat: no-repeat;
+  object-fit: fill;
+  
+}
+*/

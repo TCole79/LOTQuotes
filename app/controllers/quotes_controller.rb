@@ -2,8 +2,8 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
 
   # GET /quotes or /quotes.json
-  def index
-    @quotes = Quote.all
+  def index 
+    @quote = Quote.find(params[:id])
   end
 
   # GET /quotes/1 or /quotes/1.json

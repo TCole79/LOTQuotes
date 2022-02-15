@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :quotes
+
+  resources :quote do
+    get 'random', on: :collection
+  end
  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

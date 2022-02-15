@@ -1,3 +1,5 @@
+<body>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Quotes</h1>
@@ -5,12 +7,16 @@
 
 <h1>What has Middle Earth been saying? </h1>
 
+<div class="rando-quote">
+<%= @quotes_text %>
+<%= @author %>
+<div>
+
 
 <div class="main-ring">
 <img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
 </div>
 <br/> 
-<br/>
 <div class="generate-button">
 <%= link_to "Generate Quote!", root_path, class: 'btn btn-lg btn-primary' %>
 </div>
@@ -18,5 +24,6 @@
 <br/>
 
 
+</body>
 
-
+@quotes
