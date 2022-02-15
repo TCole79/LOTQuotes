@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/', success: "Your account was successfully created!"
     else
-      redirect_to '/sign_up', danger: "information missing"
+      redirect_to '/sign_up', alert: "information missing, passwords must be a min 5 characters"
     end
   end
 
