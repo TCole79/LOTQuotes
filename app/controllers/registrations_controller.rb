@@ -8,9 +8,9 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '/', success: "Your account was successfully created!"
+      redirect_to '/', success: "Your account was successfully created"
     else
-      redirect_to '/sign_up', alert: "information missing, passwords must be a min 5 characters"
+      redirect_to '/sign_up', alert: "Please fill out all fields, passwords must be a min 5 characters"
     end
   end
 
