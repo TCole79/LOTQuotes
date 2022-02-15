@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   
   before_action :set_current_user
 
+  add_flash_types :danger, :info, :warning, :success, :messages
+
   def set_current_user
     if session[:user_id]
      Current.user = User.find_by(id: session[:user_id])   
