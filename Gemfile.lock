@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jonhue/acts_as_favoritor.git
+  revision: 29d93c2b3732cfa40978d297907fb9ff86634a29
+  specs:
+    acts_as_favoritor (5.0.3)
+      activerecord (>= 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -235,6 +242,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  acts_as_favoritor!
   bcrypt (~> 3.1.7)
   bootsnap
   bootstrap-sass

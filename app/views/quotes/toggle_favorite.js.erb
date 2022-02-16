@@ -1,0 +1,13 @@
+
+function toggleLikeButton(quoteId, favoritedQuote) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${quoteId}']`)
+  likeButton.classList.toggle('yellow');
+  if (likeButton.classList.contains('yellow')) {
+    const favoriteList = document.querySelector('.favorites');
+    favoriteList.insertAdjacentHTML('beforeend', favoritedCocktail)
+  }
+  else {
+    document.querySelector(`.favorite[data-id='${quoteId}']`).remove()
+  }
+}
+toggleLikeButton(quoteId, '<%= j render "quotes/quote", quote: @quote %>');
