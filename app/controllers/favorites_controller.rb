@@ -1,15 +1,12 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_user!, only: :toggle_favorite
 
-  
   def index
-    @favorite_quotes = current_user.all_favorites
-  end
-  
-  def toggle_favorite
+    user = User.find_by(id: session[:user_id] )
     
-    @quote = Quote.find_by(id: params[:id])
-    current_user.favorited?(@quote)  ? current_user.unfavorite(@quote) : current_user.favorite(@quote)
-
+    if user 
+      @favorite_quotes = user.all_favorites
+    end  
   end
+
 end

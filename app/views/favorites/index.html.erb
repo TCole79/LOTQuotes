@@ -2,9 +2,9 @@
 
 <div class="main-ring">
 <img id="image" class="rotate2" src="<%= asset_path('ring2.png') %>" >
-<div class="col-xs-12 col-sm-6">
+<div>
   <div class="favorites">
-    <% @favorite_quotes.all.each do |quote| %>
+    <% @favorite_quotes.each do |quote| %>
       <%= render 'quote',  quote: quote %>
     <% end %>
   </div>

@@ -69,4 +69,16 @@ class QuotesController < ApplicationController
     def quote_params
       params.require(:quote).permit(:quote_content, :quote_author, :quote_image)
     end
+
+    #-- Favorites --
+    def all_favorites
+      @favorite_quotes = User.all_favorites
+    end
+    
+    def toggle_favorite
+    
+      @quote = Quote.find_by(id: params[:id])
+      current_user.favorited?(@quote)  ? current_user.unfavorite(@quote) : current_user.favorite(@quote)
+  
+    end
 end
