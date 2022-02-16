@@ -5,3 +5,4 @@
 //= require jquery_ujs
 
 //= link requests.js
+//= link clipboard.js

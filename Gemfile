@@ -27,6 +27,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Tristan added this for the API call
+gem "json"
+
+# Tristan added this for the copy to clipboard functionality
+gem "clipboard"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
