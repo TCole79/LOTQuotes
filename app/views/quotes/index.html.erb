@@ -1,29 +1,40 @@
+<%= javascript_include_tag('requests.js') %>
+
 <body>
 
 <p style="color: green"><%= notice %></p>
 
-<h1>Quotes</h1>
-
+<i class="fa-brands fa-facebook"></i>
 
 <h1>What has Middle Earth been saying? </h1>
 
-<div class="rando-quote">
-<%= @quotes_text %>
-<%= @author %>
-<div>
+<%= @quote.present? %>
+
+<div class= "random-quote">
+
+<% if @quote.present? %>
+<%= render @quote %>
+
+<% end %>
+
+
+
+</div>
 
 
 <div class="main-ring">
-<img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
+<img id="image" class="rotate" src="<%= asset_path('ring5.png') %>" >
 </div>
 <br/> 
-<div class="generate-button">
-<%= link_to "Generate Quote!", root_path, class: 'btn btn-lg btn-primary' %>
-</div>
+<button type="button" onclick='postButton()' class="generate-button">
+generate quote
+</button>
 <br/>
 <br/>
 
 
 </body>
 
-@quotes
+
+<i class="fa-solid fa-star-christmas"></i>
+

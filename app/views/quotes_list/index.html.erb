@@ -1,6 +1,23 @@
 <div id="quotes">
-  <% @quotes.each do |quote| %>
-    <%= render quote %>
+  <% @quotes.each do |quote,index| %>
+    <div id="<%= dom_id quote %>">
+  <p>
+    <strong>Quote content:</strong>
+    <%= quote.quote_content %>
+  </p>
+
+  <p>
+    <strong>Quote author:</strong>
+    <%= quote.quote_author %>
+  </p>
+
+  <p>
+    <strong>Quote image:</strong>
+    <%= quote.quote_image %>
+  </p>
+
+</div>
+
     <p> 
       <%= link_to "Show this quote", quote %>
     </p>
@@ -8,3 +25,6 @@
 </div>
 
 <%= link_to "New quote", new_quote_path %>
+
+<i class="fa-solid fa-star-christmas"></i>
+

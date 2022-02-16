@@ -1,9 +1,23 @@
 class QuotesController < ApplicationController
+
+  skip_before_action :verify_authenticity_token
   before_action :set_quote, only: %i[ show edit update destroy ]
 
   # GET /quotes or /quotes.json
   def index 
-    @quote = Quote.find(params[:id])
+
+    puts "testing ajax call"
+  end
+
+  def test
+    puts "quote test"
+  end
+
+  def generate_quote
+    
+    @quote = Quote.find_by(id: params[:id]) || Quote.random
+
+    render "index"
   end
 
   # GET /quotes/1 or /quotes/1.json
@@ -23,7 +37,7 @@ class QuotesController < ApplicationController
   # POST /quotes or /quotes.json
   def create
     @quote = Quote.new(quote_params)
-
+  
     respond_to do |format|
       if @quote.save
         format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }

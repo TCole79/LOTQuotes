@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "quotes#index"
   get "/quotes", to: "quotes#index"
-
+ 
+  post "/quotes/generate_quote", to: "quotes#generate_quote"
+  
   get "/about", to: "about#index"
+
 
   get "/favourites", to: "favourites#index"
 
