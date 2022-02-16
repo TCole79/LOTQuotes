@@ -1,0 +1,13 @@
+const copyToClipboard = function() {
+  const copyText = document.querySelector(".quote");
+  navigator.clipboard.writeText(copyText.innerText).then(() => {
+    // Alert the user that the action took place.
+    // Nobody likes hidden stuff being done under the hood!
+    alert("Copied to clipboard");
+  });
+};
+
+// const copyBtn = document.querySelector(".btn-clipboard");
+// copyBtn.addEventListener("click", copyToClipboard);
+
+//export default copyToClipboard;
