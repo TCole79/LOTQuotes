@@ -6,8 +6,6 @@ class FavoritesController < ApplicationController
     
     user = User.find_by(id: session[:user_id] )
 
-    
-
     if user 
       @favorite_quotes = user.all_favorites
     end  
