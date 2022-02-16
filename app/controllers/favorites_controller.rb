@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
 
   
   def index
-    @favorite_quotes = user.all_favorites
+    @favorite_quotes = current_user.all_favorites
   end
   
   def toggle_favorite

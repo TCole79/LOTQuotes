@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_02_16_001216) do
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
@@ -29,6 +30,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_16_001216) do
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_02_14_025950) do
+>>>>>>> 38d91f74d8ac777e9b84200bf6f51efe9f452c8d
   create_table "quotes", force: :cascade do |t|
     t.string "quote_content"
     t.string "quote_author"

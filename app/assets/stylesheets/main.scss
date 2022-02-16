@@ -44,8 +44,6 @@ h1:hover {
     filter: hue-rotate(50deg);
     animation: rotation 40s infinite linear;
   }
-
-  
   .rotate:hover {
     filter:hue-rotate(180deg);
     transition: filter 5s ease-in-out;
@@ -60,7 +58,7 @@ h1:hover {
   }
 }
 
-// custom settings for the About Page content
+//// custom settings for the About Page content ////
 .about {
   display:flex;
   justify-content: center;
@@ -73,59 +71,66 @@ h1:hover {
     justify-content: center;
   }
   .about-button:hover {  
-    font-family:"Moria",
+    font-family:"Moria";
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+  }
+  // Add animation (fade in the popup)
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
   }
 
-// Container holding the About image and the text //
+
+//// Container holding the About image and the text ////
 .container {
   position: relative;
   text-align: center;
   color: white;
 }
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  color: black;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  color: black;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  color: black;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  color: black;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-} 
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: black;
+  }
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: black;
+  }
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: black;
+  }
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: black;
+  }
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  } 
 
 .create-form {
-   display:flex;
+  display:flex;
   justify-content: center;
   position: absolute;
   z-index: 1;
@@ -136,15 +141,13 @@ h1:hover {
     filter: hue-rotate(310deg);
     animation: rotation 60s infinite linear;
     position:absolute;
-
   }
 .main-ring2 {
-
   display:flex;
   justify-content: center;
- 
 }
 
+<<<<<<< HEAD
 /*--registration form css --*/
 .centered-register {
   position: absolute;
@@ -159,3 +162,59 @@ h1:hover {
   left: 42%;
 }
 
+=======
+//// custom button code for clipboard copy/paste function ////
+.btn-clipboard {
+  position: relative;
+  top: .5rem;
+  right: .5rem;
+  z-index: 10;
+  display: block;
+  padding: .25rem .5rem;
+  font-size: 75%;
+  color: #818a91;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: .25rem;
+}
+  .btn-clipboard:hover {
+    color: #fff;
+    background-color: #027de7;
+  }
+// custom tooltip css for clipboard copy/paste function - NOT FINISHED
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+>>>>>>> 38d91f74d8ac777e9b84200bf6f51efe9f452c8d
