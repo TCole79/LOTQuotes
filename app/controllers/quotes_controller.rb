@@ -1,11 +1,28 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
-
+  
+  # this code needed to get our API helper working and accessible where needed
+  require "api_helper"
+  include ApiHelper
+  
   # GET /quotes or /quotes.json
   def index
-    @quotes = Quote.all
+    # @quotes = Quote.all
+    @weather = weather_api
+    @tolkien = tolkien_random_api
+    @tolkien_character = tolkien_character_api
   end
 
+  def tolkien
+    @tolkien = tolkien_random_api
+    render json: @tolkien
+  end
+
+  def tolkien_character
+    @tolkien_character = tolkien_character_api
+    render json: @tolkien_character
+  end
+  
   # GET /quotes/1 or /quotes/1.json
   def show
   end

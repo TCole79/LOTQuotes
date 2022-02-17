@@ -2,3 +2,4 @@
 //= link_directory ../stylesheets .css
 
 //= link clipboard.js
+//= link tolkien_api.js

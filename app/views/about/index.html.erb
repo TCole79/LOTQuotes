@@ -12,20 +12,21 @@
 <div class="main-ring">
   <div class="container">
   <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
-    <div class="bottom-left">Quote: <%= @tolkien_output['text'] %> <br> Author: <%= @tolkien_output['character'] %> </div>
+    <div class="bottom-left">Bottom Left placeholder</div>
     <div class="top-left">Top Left placeholder</div>
     <div class="top-right">Top Right placeholder</div>
     <div class="bottom-right">Current Weather in<br> Middle Earth, Maryland: <br>
       <%= @weather_output['weather'][0]['description'].titlecase %> <br> <%= @weather_output['main']['temp'] %> &#8451
     </div>
-    <div class="centered"> <span class="quote"> "One Site to Quote them all, <br>one Database to Find them, <br>one API to Bring them all, <br>and to the Client Render them!"</span>
+    <div class="centered"> <span class="quote">"One Site to Quote them all, <br>one Database to Find them, <br>one API to Bring them all, <br>and to the Client Render them!"</span>
     <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
     </div>
   </div> 
 </div>
-
+<br>
 <div class="about-button">
 <%= link_to "Return to Main", root_path, class: 'btn btn-lg btn-primary' %>
 </div>
 
 
+<%# Quote: <%= @tolkien_output['text'] Author: <%= @tolkien_output['character'] %>

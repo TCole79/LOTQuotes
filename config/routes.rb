@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   resources :quotes
- 
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   root "quotes#index"
   get "/quotes", to: "quotes#index"
-
+  get "/tolkien", to: "quotes#tolkien"
+  get "/tolkien_character", to: "quotes#tolkien_character"
   get "/about", to: "about#index"
 
   get "/favourites", to: "favourites#index"

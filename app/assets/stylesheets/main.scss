@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+//@import "dropdown_buttons";
+@import "about_page";
 
 // custom fonts
 @font-face {
@@ -16,7 +18,7 @@ h1 {
 }
 
 h1:hover {
-  font-family: "Dwarvish"
+  font-family: "Moria"
 }
 
 .generate-button {
@@ -25,7 +27,7 @@ h1:hover {
 }
 
 .generate-button:hover {  
-  font-family:"Dwarvish",
+  font-family:"Moria",
 }
 
 // custom class for the spinning ring
@@ -57,34 +59,6 @@ h1:hover {
     transform: rotate(359deg);
   }
 }
-
-//// custom settings for the About Page content ////
-.about {
-  display:flex;
-  justify-content: center;
-  //flex-direction:  row;
-  flex-wrap:       wrap;
-  justify-content: space-around;
-}
-  .about-button {
-    display:flex;
-    justify-content: center;
-  }
-  .about-button:hover {  
-    font-family:"Moria";
-    -webkit-animation: fadeIn 2s;
-    animation: fadeIn 2s;
-  }
-  // Add animation (fade in the popup)
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-
 
 //// Container holding the About image and the text ////
 .container {
