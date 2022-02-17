@@ -13,6 +13,16 @@
   src: url("Dwarvish.ttf");
 }
 
+body {
+  background-image: url('background1.jpg');
+  background-repeat: no-repeat;
+  object-fit: fill;
+  min-width: 100%;
+  min-height: 100%;
+  //backdrop-filter: blur(4px)
+}
+
+
 h1 {
   font-family: "English";
 }
@@ -22,33 +32,41 @@ h1:hover {
 }
 
 .generate-button {
+
   display:flex;
   justify-content: center;
-}
+  position: relative;
+  
+  z-index:2;
+  
 
+}
+/*
 .generate-button:hover {  
   font-family:"Moria",
 }
-
+*/
 // custom class for the spinning ring
 .main-ring {
   display:flex;
   justify-content: center;
 }
   .rotate {  
-    width: 700px; 
+    width: 600px; 
     filter: hue-rotate(0deg);
-    transition: filter 5s ease-in-out;
-    animation: rotation 40s infinite linear;
+    transition: filter 30s ease-in-out;
+    animation: rotation 120s infinite linear;
+    position: absolute;
+    z-index: 1;
   }
   .rotate2 {  
     width: 700px; 
     filter: hue-rotate(50deg);
-    animation: rotation 40s infinite linear;
+    animation: rotation 120s infinite linear;
   }
   .rotate:hover {
-    filter:hue-rotate(180deg);
-    transition: filter 5s ease-in-out;
+    filter:hue-rotate(1079deg);
+    transition: filter 30s ease-in-out;
   }
 
 @keyframes rotation {
@@ -56,7 +74,7 @@ h1:hover {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(1079deg);
   }
 }
 
@@ -108,24 +126,33 @@ h1:hover {
   justify-content: center;
   position: absolute;
   z-index: 1;
-  top: 42%;
+  top: 43.5%;
 }
 .rotate3 {  
-    width: 900px; 
-    filter: hue-rotate(310deg);
-    animation: rotation 60s infinite linear;
+    width: 700px; 
+    filter: hue-rotate(330deg);
+    animation: rotation 120s infinite linear;
     position:absolute;
   }
 .main-ring2 {
   display:flex;
   justify-content: center;
 }
+/*
+.new-body {
+  background-image: url('background6.jpeg');
+  background-repeat: no-repeat;
+  object-fit: fill;
+  
+}
+*/
 
 /*--registration form css --*/
 .centered-register {
   position: absolute;
   top: 53.5%;
   left: 43.25%;
+  z-index:3;
 }
 
 /*--sign-in form css-- */
@@ -133,6 +160,7 @@ h1:hover {
   position: absolute;
   top: 61%;
   left: 42%;
+  z-index:3;
 }
 
 //// custom button code for clipboard copy/paste function ////
@@ -189,3 +217,5 @@ h1:hover {
     visibility: visible;
     opacity: 1;
   }
+
+ 

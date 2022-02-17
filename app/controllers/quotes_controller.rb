@@ -1,4 +1,6 @@
 class QuotesController < ApplicationController
+
+  skip_before_action :verify_authenticity_token
   before_action :set_quote, only: %i[ show edit update destroy ]
   
   # this code needed to get our API helper working and accessible where needed
@@ -40,7 +42,7 @@ class QuotesController < ApplicationController
   # POST /quotes or /quotes.json
   def create
     @quote = Quote.new(quote_params)
-
+  
     respond_to do |format|
       if @quote.save
         format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }
