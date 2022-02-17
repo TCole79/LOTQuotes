@@ -1,29 +1,40 @@
 <h1>Registration</h1>
 
 <div class="main-ring">
-<img id="image" class="rotate3" src="<%= asset_path('ring2.png') %>" >
-  <div class="centered">
-    <table>
-      <tr>
-        <%= form_with model: @user, url: sign_up_path do |f|  %>
-          
-          <%= f.label :username %>
-          <%= f.text_field :name %>
-          
-          <%= f.label :email %>
-          <%= f.text_field :email %>
+<img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
+  <div class="centered-register">
+    
+    <tr>
+      <%= form_with model: @user, url: sign_up_path do |f|  %>
+        
+        <div>
+        <%= f.label :username, style: "display: block" %>
+        <%= f.text_field :name %>
+        </div>
+        
+        <div>
+        <%= f.label :email, style: "display: block" %>
+        <%= f.text_field :email %>
+        </div>
 
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+        <div>
+        <%= f.label :password, style: "display: block" %>
+        <%= f.password_field :password %>
+        </div>
 
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation %>
+        <div>
+        <%= f.label :password_confirmation, style: "display: block" %>
+        <%= f.password_field :password_confirmation %>
+        </div>
+      <br>  
+        <div>
+        <%= f.submit "Sign Up" %>
+        </div>
 
-          <%= f.submit "Sign Up" %>
-        <% end %>
-      <%= render "layouts/flash" %>
-      </tr>
-    </table>
+      <% end %>
+    <%= render "layouts/flash" %>
+    </tr>
+    
   </div>  
 
 </div>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/tolkien_character", to: "quotes#tolkien_character"
   get "/about", to: "about#index"
 
-  get "/favourites", to: "favourites#index"
+  get "/favorites", to: "favorites#index"
 
   get "/new_quote", to: "new_quote#index"
 
@@ -25,5 +25,9 @@ Rails.application.routes.draw do
   post "/sign_in", to: "sessions#create"
   get "/log_out", to: "sessions#destroy"
 
-
+  resources :quotes, only: :index do
+    member do
+      post 'toggle_favorite', to: "quotes#toggle_favorite"
+    end
+  end  
 end

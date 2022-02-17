@@ -1,14 +1,14 @@
 <h1>Sign In </h1>
 
 <div class="main-ring">
-<img id="image" class="rotate3" src="<%= asset_path('ring2.png') %>" >
-  <div class="centered">
+<img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
+  <div class="centered-signin">
       <%= form_with url: sign_in_path do |f| %>
 
-        <%= f.label :Email %>
+        <%= f.label :Email, style: "display: block" %>
         <%= f.text_field :email %>
 
-        <%= f.label :Password %>
+        <%= f.label :Password, style: "display: block" %>
         <%= f.password_field :password %>
 
         <%= f.submit "Sign in" %>
