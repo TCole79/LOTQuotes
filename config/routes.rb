@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get "/new_quote", to: "new_quote#index"
 
   get "/quotes_list", to: "quotes_list#index"
+
+  
   
   resources :users
 

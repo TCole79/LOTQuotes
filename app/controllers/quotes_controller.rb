@@ -6,13 +6,10 @@ class QuotesController < ApplicationController
   # GET /quotes or /quotes.json
   def index 
 
-    puts "testing ajax call"
+
   end
 
-  def test
-    puts "quote test"
-  end
-
+  
   def generate_quote
     
     @quote = Quote.find_by(id: params[:id]) || Quote.random

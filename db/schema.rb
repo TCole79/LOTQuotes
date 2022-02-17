@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_15_015430) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_17_030451) do
   create_table "quotes", force: :cascade do |t|
     t.string "quote_content"
     t.string "quote_author"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_15_015430) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end

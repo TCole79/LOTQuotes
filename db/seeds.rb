@@ -38,3 +38,4 @@ Quote.create(
   quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
   quote_author:'Sauron'
 )
+
