@@ -7,4 +7,6 @@ class Quote < ApplicationRecord
   validates :quote_author, presence: true
   
 
+  acts_as_favoritable
+  
 end

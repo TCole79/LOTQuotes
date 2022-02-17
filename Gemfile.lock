@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jonhue/acts_as_favoritor.git
+  revision: 29d93c2b3732cfa40978d297907fb9ff86634a29
+  specs:
+    acts_as_favoritor (5.0.3)
+      activerecord (>= 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,6 +164,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.2.2)
@@ -243,6 +252,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  acts_as_favoritor!
   bcrypt (~> 3.1.7)
   bootsnap
   bootstrap-sass
@@ -255,6 +265,7 @@ DEPENDENCIES
   jquery-rails
   json
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.2, >= 7.0.2.2)
   sassc-rails
   selenium-webdriver

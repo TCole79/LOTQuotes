@@ -2,21 +2,29 @@ class QuotesController < ApplicationController
 
   skip_before_action :verify_authenticity_token
   before_action :set_quote, only: %i[ show edit update destroy ]
-
-  # GET /quotes or /quotes.json
-  def index 
-
-
-  end
-
   
-  def generate_quote
-    
-    @quote = Quote.find_by(id: params[:id]) || Quote.random
-
-    render "index"
+  # this code needed to get our API helper working and accessible where needed
+  require "api_helper"
+  include ApiHelper
+  
+  # GET /quotes or /quotes.json
+  def index
+    # @quotes = Quote.all
+    @weather = weather_api
+    @tolkien = tolkien_random_api
+    @tolkien_character = tolkien_character_api
   end
 
+  def tolkien
+    @tolkien = tolkien_random_api
+    render json: @tolkien
+  end
+
+  def tolkien_character
+    @tolkien_character = tolkien_character_api
+    render json: @tolkien_character
+  end
+  
   # GET /quotes/1 or /quotes/1.json
   def show
   end
@@ -78,5 +86,17 @@ class QuotesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def quote_params
       params.require(:quote).permit(:quote_content, :quote_author, :quote_image)
+    end
+
+    #-- Favorites --
+    def all_favorites
+      @favorite_quotes = User.all_favorites
+    end
+    
+    def toggle_favorite
+    
+      @quote = Quote.find_by(id: params[:id])
+      current_user.favorited?(@quote)  ? current_user.unfavorite(@quote) : current_user.favorite(@quote)
+  
     end
 end

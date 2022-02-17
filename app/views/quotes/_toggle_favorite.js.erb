@@ -1,0 +1,7 @@
+
+const quoteId = '<%= @quote.id%>'
+function toggleLikeButton(quoteId, innerHTML) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${quoteId}']`)
+  likeButton.classList.toggle('yellow');
+}
+toggleLikeButton(quoteId);

@@ -1,36 +1,43 @@
-<%= javascript_include_tag('requests.js') %>
+<%= javascript_include_tag('clipboard.js') %>
+<%= javascript_include_tag('tolkien_api.js') %>
 
-<body>
 
 <p style="color: green"><%= notice %></p>
 
-<i class="fa-brands fa-facebook"></i>
+<h1>The Lord of the Quotes</h1>
 
 <h1>What has Middle Earth been saying? </h1>
 
-<%= @quote.present? %>
-
-<div class= "random-quote">
-
-<% if @quote.present? %>
-<%= render @quote %>
-
-<% end %>
-
-
-
-</div>
-
-
 <div class="main-ring">
-<img id="image" class="rotate" src="<%= asset_path('ring5.png') %>" >
+  <div class="container">
+  <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
+    <div class="bottom-left">Bottom Left placeholder </div>
+    <div class="top-left">Refine quotes by character:
+      <form>
+        <select name="Character">
+          <option value=""></option>
+          <option value="Aragorn">Aragorn</option>
+          <option value="Bilbo">Bilbo</option>
+          <option value="Boromir">Boromir</option>
+          <option value="Celeborn">Celeborn</option>
+          <option value="Elrond">Elrond</option>
+        </select>
+      </form>
+    </div>
+    <div class="top-right">Quote: <%= @tolkien_character[0]['text'] %> Author: <%= @tolkien_character[0]['character'] %> </div>
+    <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
+      <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
+    </div>
+    <div class="centered"> <span id="tolkien" class="quote"> Quote: <%= @tolkien['text'] %> Author: <%= @tolkien['character'] %> </span>
+    <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
+    </div>
+  </div> 
 </div>
-<br/> 
+<br>
 <div class="generate-button">
-<%= link_to "Generate Quote!", root_path, class: 'btn btn-lg btn-primary' %>
+  <button class="generate-button" onclick="tolkienApi()" data-original-title="Copy to clipboard">Generate Quote!</button>
 </div>
-<br/>
-<br/>
+
 
 
 </body>
