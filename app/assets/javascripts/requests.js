@@ -1,10 +1,6 @@
-
-
-let postButton = function(){
-  
+let postButton = function () {
   $.ajax({
-  url: '/quotes/generate_quote',
-  type: 'POST',
-
-})
-}
+    url: "/quotes/generate_quote",
+    type: "POST",
+  });
+};

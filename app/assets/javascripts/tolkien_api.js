@@ -19,4 +19,4 @@ const tolkienApi = function() {
   };
 
   request.send();
-}; 
+};
