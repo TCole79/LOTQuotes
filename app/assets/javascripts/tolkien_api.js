@@ -1,4 +1,4 @@
-const tolkienApi = function () {
+const tolkienApi = function() {
   let request = new XMLHttpRequest();
 
   request.open("GET", "http://localhost:3000/tolkien", true);
@@ -19,12 +19,4 @@ const tolkienApi = function () {
   };
 
   request.send();
-};
-
-
-// Tristan added this working code for a random function
-// const randomItem = function(items) {
-//   return items[Math.floor(Math.random() * items.length - 1)];
-// };
-// const items = [254, 45, 212, 365, 2543]; // example array with contents
-// console.log(randomItem(items));
+}; 

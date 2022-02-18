@@ -9,11 +9,13 @@
   .about-button {
     display:flex;
     justify-content: center;
+    pointer-events: auto;
   }
   .about-button:hover {  
     font-family:"Moria";
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+    pointer-events: auto;
   }
   // Add animation (fade in the button text change)
   @-webkit-keyframes fadeIn {
