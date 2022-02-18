@@ -2,6 +2,7 @@
 @import "bootstrap";
 //@import "dropdown_buttons";
 @import "about_page";
+@import "font-awesome";
 
 // custom fonts
 @font-face {
@@ -13,6 +14,7 @@
   src: url("Dwarvish.ttf");
 }
 
+/*
 body {
   background-image: url('background1.jpg');
   background-repeat: no-repeat;
@@ -21,7 +23,7 @@ body {
   min-height: 100%;
   //backdrop-filter: blur(4px)
 }
-
+*/
 
 h1 {
   font-family: "English";

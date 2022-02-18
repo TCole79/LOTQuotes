@@ -1,3 +1,58 @@
+
+
+<body>
+
+<div >Refine quotes by character:
+<form>
+  <select name="Character">
+    <option value=""></option>
+    <option value="Aragorn">Aragorn</option>
+    <option value="Bilbo" class= "Bilbo">Bilbo</option>
+    <option value="Boromir">Boromir</option>
+    <option value="Celeborn">Celeborn</option>
+    <option value="Elrond">Elrond</option>
+  </select>
+</form>
+</div>
+
+
+
+<div>
+<% @bilboQuotes.each do |quote,index| %>
+
+  <div id="<%= dom_id quote %>">
+  <p>
+    <strong>Quote content:</strong>
+    <%= quote.quote_content %>
+  </p>
+
+  <p>
+    <strong>Quote author:</strong>
+    <%= quote.quote_author %>
+  </p>
+ 
+</div>
+ <% end %>
+
+<br>
+
+Testing
+<br>
+Testing
+<br>
+Testing
+<br>
+Testing
+<br>
+Testing
+<br>
+Testing
+
+<br>
+
+
+
+
 <div id="quotes">
   <% @quotes.each do |quote,index| %>
     <div id="<%= dom_id quote %>">
@@ -22,9 +77,11 @@
       <%= link_to "Show this quote", quote %>
     </p>
   <% end %>
-</div>
+
 
 <%= link_to "New quote", new_quote_path %>
 
-<i class="fa-solid fa-star-christmas"></i>
 
+
+
+</body>
