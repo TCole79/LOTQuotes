@@ -21,7 +21,7 @@ class QuotesController < ApplicationController
   end
 
   def tolkien_character
-    @tolkien_character = tolkien_character_api
+    @tolkien_character = tolkien_character_api(params[:name])
     render json: @tolkien_character
   end
   

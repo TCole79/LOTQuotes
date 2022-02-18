@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root "quotes#index"
   get "/quotes", to: "quotes#index"
   get "/tolkien", to: "quotes#tolkien"
-  get "/tolkien_character", to: "quotes#tolkien_character"
+  get "/tolkien_character/:name", to: "quotes#tolkien_character"
   get "/about", to: "about#index"
 
   get "/favorites", to: "favorites#index"

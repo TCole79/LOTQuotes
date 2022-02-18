@@ -1,6 +1,6 @@
 module ApiHelper
 
-  require 'net/http'
+  require 'net/http' 
   require 'json'
 
   def weather_api
@@ -31,17 +31,20 @@ module ApiHelper
     end
   end
 
-  def tolkien_character_api 
+  def tolkien_character_api (name = "Aragorn")
   # Tolkien API request code here for CHARACTER specific quotes
-    @tolkien_url2 = 'https://tolkien-api.herokuapp.com/Quotes/by/Aragorn'
+    @tolkien_url2 = "https://tolkien-api.herokuapp.com/Quotes/by/#{name}"
     @uri3 = URI(@tolkien_url2)
     @response3 = Net::HTTP.get(@uri3)
     @tolkien_output2 = JSON.parse(@response3)
+    # @tolkien_output2.shuffle.first
     # checking for empty return results
     if @tolkien_output2.empty?
       @tolkien_output2 = "Error"
     else
-      @tolkien_output2 = @tolkien_output2
+      @tolkien_output2 = @tolkien_output2.shuffle.first
     end
+    @tolkien_output2
   end
+
 end

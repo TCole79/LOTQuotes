@@ -1,5 +1,6 @@
 <%= javascript_include_tag('clipboard.js') %>
 <%= javascript_include_tag('tolkien_api.js') %>
+<%= javascript_include_tag('dropdown.js') %>
 
 
 <p style="color: green"><%= notice %></p>
@@ -14,17 +15,18 @@
     <div class="bottom-left">Bottom Left placeholder </div>
     <div class="top-left">Refine quotes by character:
       <form>
-        <select name="Character">
-          <option value=""></option>
+        <select>
+          <option disabled hidden selected>Select</option>
           <option value="Aragorn">Aragorn</option>
-          <option value="Bilbo">Bilbo</option>
+          <option value="Bilbo">Bilbo</option> 
           <option value="Boromir">Boromir</option>
           <option value="Celeborn">Celeborn</option>
           <option value="Elrond">Elrond</option>
         </select>
+          <h4>Choice</h4>
       </form>
     </div>
-    <div class="top-right">Quote: <%= @tolkien_character[0]['text'] %> Author: <%= @tolkien_character[0]['character'] %> </div>
+    <div class="top-right quoteByAuthor">Quote: <%= @tolkien_character["text"] %> Author: <%= @tolkien_character["character"] %> </div>
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
     </div>
@@ -39,10 +41,6 @@
   <button class="generate-button" onclick="tolkienApi()" data-original-title="Copy to clipboard">Generate Quote!</button>
 </div>
 
-
-
 </body>
 
-
-<i class="fa-solid fa-star-christmas"></i>
-
+<%# <i class="fa-solid fa-star-christmas"></i> %>
