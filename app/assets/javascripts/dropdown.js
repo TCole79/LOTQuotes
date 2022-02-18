@@ -18,19 +18,20 @@
 
 // event listener attached to the dropdown - event listener on-change
 
-$(document).ready(function() {
+$(document).ready(function () {
   console.log("ready!");
-  $("select").on("change", function() {
+  $("select").on("change", function () {
     $.ajax({
       url: `/tolkien_character/${this.value}`,
-      success: function(data) {
+      success: function (data) {
         // $('#data').text(data);
         // alert(data);
         $(".quoteByAuthor").text(data.text + " :" + data.character);
       },
-      error: function() {
+      error: function () {
         alert("There was an error.");
       },
     });
   });
 });
+
