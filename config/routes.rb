@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :quotes, only: :index do
     member do
-      post 'toggle_favorite', to: "quotes#toggle_favorite"
+      post 'toggle_favorite', to: 'quotes#toggle_favorite'
     end
   end  
 end

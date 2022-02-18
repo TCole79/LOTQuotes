@@ -2,6 +2,7 @@
 @import "bootstrap";
 //@import "dropdown_buttons";
 @import "about_page";
+@import 'font-awesome';
 
 // custom fonts
 @font-face {
@@ -19,12 +20,14 @@ body {
   object-fit: fill;
   min-width: 100%;
   min-height: 100%;
+  
   //backdrop-filter: blur(4px)
 }
 
 
 h1 {
   font-family: "English";
+
 }
 
 h1:hover {
@@ -218,4 +221,7 @@ h1:hover {
     opacity: 1;
   }
 
+.navbar {
+  color: black
+}
  
