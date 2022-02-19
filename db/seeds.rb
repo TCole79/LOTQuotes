@@ -37,7 +37,6 @@ Quote.create(
   quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
   quote_author:'Sauron'
 )
-
 # no quotes in the db for 
 # Merry
 # Pippin
@@ -45,8 +44,6 @@ Quote.create(
 # Saruman
 # Gollum 
 
-# quotes start:
-# Aragorn 
 
 Quote.create(
   quote_content:'"There are some things that it is better to begin than to refuse, even though the end may be dark.”',
@@ -54,50 +51,25 @@ Quote.create(
 )
 
 Quote.create(
-  quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
+  quote_content:'"None knows what the new day shall bring him.”',
   quote_author:'Aragorn'
 )
 
 Quote.create(
-  quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
+  quote_content:'"One who cannot cast away a treasure at need is in fetters.”',
   quote_author:'Aragorn'
 )
 
 Quote.create(
-  quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
+  quote_content:'"The hasty stroke goes oft astray.”',
   quote_author:'Aragorn'
 )
 
 Quote.create(
-  quote_content:'"You can not hide, I see you! There is no life after me. Only death!”',
+  quote_content:'"Deeds will not be less valiant because they are unpraised.”',
   quote_author:'Aragorn'
 )
 [
-  {
-    "id": 37,
-    "text": "There are some things that it is better to begin than to refuse, even though the end may be dark.",
-    "character": "Aragorn"
-  },
-  {
-    "id": 48,
-    "text": "None knows what the new day shall bring him. ",
-    "character": "Aragorn"
-  },
-  {
-    "id": 50,
-    "text": "One who cannot cast away a treasure at need is in fetters.",
-    "character": "Aragorn"
-  },
-  {
-    "id": 76,
-    "text": "The hasty stroke goes oft astray.",
-    "character": "Aragorn"
-  },
-  {
-    "id": 78,
-    "text": "Deeds will not be less valiant because they are unpraised.",
-    "character": "Aragorn"
-  },
   {
     "id": 47,
     "text": "There are some things that it is better to begin than to refuse, even though the end may be dark.",

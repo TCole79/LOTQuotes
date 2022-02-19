@@ -13,7 +13,7 @@
   <div class="container">
   <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
     <div class="bottom-left">Bottom Left placeholder </div>
-    <div class="top-left">Refine quotes by character:
+    <div class="top-left">Choose quotes by character:
       <form>
         <select>
           <option disabled hidden selected>Select</option>
@@ -23,23 +23,37 @@
           <option value="Celeborn">Celeborn</option>
           <option value="Elrond">Elrond</option>
         </select>
-          <h4>Choice</h4>
+          <button type="button" class="fetch-specific-quote" >Fetch a Quote!</button>
       </form>
     </div>
-    <div class="top-right quoteByAuthor">Quote: <%= @tolkien_character["text"] %> Author: <%= @tolkien_character["character"] %> </div>
+    <div class="top-right quoteByAuthor"> <%= @tolkien_character["text"] %> ~ <%= @tolkien_character["character"] %> </div>
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
     </div>
-    <div class="centered"> <span id="tolkien" class="quote"> Quote: <%= @tolkien['text'] %> Author: <%= @tolkien['character'] %> </span>
+    <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
     <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
+      <div class="generate-button-div"> 
+      <button class="generate-button" >Random Quote!</button>
+      <a href="#" data-quote-id=<%= @tolkien['id'] %> class="favorite"> Favorite </a>
+      <a href="#" class="unFavorite" hidden> Un Favorite </a>
+      </div>
     </div>
   </div> 
 </div>
 <br>
-<div class="generate-button">
-  <button class="generate-button" onclick="tolkienApi()" data-original-title="Copy to clipboard">Generate Quote!</button>
-</div>
 
+<div class="container">
+      <div class="ticker">
+        <div class="title"><h5>Breaking News</h5></div>
+        <div class="news">
+          <marquee>
+            <p>
+            /// Entwives reportedly sighted on the west bank of a southern bow of the river Carnen, flowing into the Sea of Rhûn /// Hobbit's take Gold Medal in Curling at ME Winter Olympics, coach attributes success to, "being low to the ground" /// Exclusive interview with the Balrog tonight at 9pm, "I'm just misunderstood." /// Minas Tirith FC win the Champion's League final against Mordor United, final score 3-2 and only three player fatalities /// The Rohan Derby mired in controversy after Elvish team ~ Valaya's Breath ~ accused of using magic to win /// The Epic Dwarven Brewery Tour now open for tickets, get yours online now /// Farmers in the Westfold grow a 22lb pumpkin, beating the famed Farmer Maggot's Guiness Book of ME Records entry of 3025 /// Goblin factory workers unionize, spokesman releases statement, "Nah dis is fair, innit" /// Weathertop Restoration Fund reaches it's crowdfunding target after mysterious benefactor donates a set of mithril armour /// Cave Troll sanctuary in the Misty Mountains set to open summer this year /// The final Palantir recovered in a garage sale in Dale, owner say's, "We used it as a paperweight for years." /// Prancing Pony Celebrates its 50th year of operation with a limited run of themed beer steins - more details to follow /// Results now coming in from Mordor general election, Sauron reported to have 98.5% of the votes ///
+          </p>
+          </marquee>
+        </div>
+      </div>
+    </div>
 </body>
 
 <%# <i class="fa-solid fa-star-christmas"></i> %>

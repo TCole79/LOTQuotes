@@ -2,6 +2,7 @@
 @import "bootstrap";
 //@import "dropdown_buttons";
 @import "about_page";
+@import "ticker";
 
 // custom fonts
 @font-face {
@@ -22,53 +23,49 @@ body {
   //backdrop-filter: blur(4px)
 }
 
-
 h1 {
   font-family: "English";
 }
 
 h1:hover {
-  font-family: "Moria"
+  font-family: "Moria";
 }
 
-.generate-button {
-
-  display:flex;
+.generate-button-div {
+  display: flex;
   justify-content: center;
   position: relative;
-  
-  z-index:2;
-  
 
+  z-index: 2;
 }
 /*
-.generate-button:hover {  
+.generate-button-div:hover {  
   font-family:"Moria",
 }
 */
 // custom class for the spinning ring
 .main-ring {
-  display:flex;
+  display: flex;
   justify-content: center;
   pointer-events: none;
 }
-  .rotate {  
-    width: 600px; 
-    filter: hue-rotate(0deg);
-    transition: filter 30s ease-in-out;
-    animation: rotation 120s infinite linear;
-    position: absolute;
-    z-index: 1;
-  }
-  .rotate2 {  
-    width: 700px; 
-    filter: hue-rotate(50deg);
-    animation: rotation 120s infinite linear;
-  }
-  .rotate:hover {
-    filter:hue-rotate(1079deg);
-    transition: filter 30s ease-in-out;
-  }
+.rotate {
+  width: 600px;
+  filter: hue-rotate(0deg);
+  transition: filter 30s ease-in-out;
+  animation: rotation 120s infinite linear;
+  position: absolute;
+  z-index: 1;
+}
+.rotate2 {
+  width: 700px;
+  filter: hue-rotate(50deg);
+  animation: rotation 120s infinite linear;
+}
+.rotate:hover {
+  filter: hue-rotate(1079deg);
+  transition: filter 30s ease-in-out;
+}
 
 @keyframes rotation {
   from {
@@ -85,60 +82,60 @@ h1:hover {
   text-align: center;
   color: white;
 }
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color: black;
-  }
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    color: black;
-    pointer-events: auto;
-  }
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    color: black;
-  }
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    color: black;
-  }
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    pointer-events: auto;
-  } 
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: black;
+}
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: black;
+  pointer-events: auto;
+}
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: black;
+}
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: black;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  pointer-events: auto;
+}
 
 .create-form {
-  display:flex;
+  display: flex;
   justify-content: center;
   position: absolute;
   z-index: 1;
   top: 43.5%;
 }
-.rotate3 {  
-    width: 700px; 
-    filter: hue-rotate(330deg);
-    animation: rotation 120s infinite linear;
-    position:absolute;
-  }
+.rotate3 {
+  width: 700px;
+  filter: hue-rotate(330deg);
+  animation: rotation 120s infinite linear;
+  position: absolute;
+}
 .main-ring2 {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 /*
@@ -155,7 +152,7 @@ h1:hover {
   position: absolute;
   top: 53.5%;
   left: 43.25%;
-  z-index:3;
+  z-index: 3;
 }
 
 /*--sign-in form css-- */
@@ -163,62 +160,60 @@ h1:hover {
   position: absolute;
   top: 61%;
   left: 42%;
-  z-index:3;
+  z-index: 3;
 }
 
 //// custom button code for clipboard copy/paste function ////
 .btn-clipboard {
   position: relative;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   z-index: 10;
   display: block;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   font-size: 75%;
   color: #818a91;
   cursor: pointer;
   background-color: transparent;
   border: 0;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
-  .btn-clipboard:hover {
-    color: #fff;
-    background-color: #027de7;
-  }
+.btn-clipboard:hover {
+  color: #fff;
+  background-color: #027de7;
+}
 // custom tooltip css for clipboard copy/paste function - NOT FINISHED
 .tooltip {
   position: relative;
   display: inline-block;
 }
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-
- 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
