@@ -1,0 +1,29 @@
+//// custom settings for the About Page content ////
+.about {
+  display:flex;
+  justify-content: center;
+  //flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+}
+  .about-button {
+    display:flex;
+    justify-content: center;
+    pointer-events: auto;
+  }
+  .about-button:hover {  
+    font-family:"Moria";
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    pointer-events: auto;
+  }
+  // Add animation (fade in the button text change)
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+

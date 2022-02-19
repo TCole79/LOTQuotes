@@ -1,0 +1,12 @@
+<h1> Your Favorites </h1>
+
+<div class="main-ring">
+<img id="image" class="rotate2" src="<%= asset_path('ring2.png') %>" >
+<div>
+  <div class="favorites">
+    <% @favorite_quotes.each do |quote| %>
+      <%= render 'quote',  quote: quote %>
+    <% end %>
+  </div>
+</div>
+</div>

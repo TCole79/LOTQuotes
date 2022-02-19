@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem "acts_as_favoritor", github: "jonhue/acts_as_favoritor"
+
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
@@ -27,6 +30,14 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "rack-cors"
+
+# Tristan added this for the API call
+gem "json"
+
+# Tristan added this for the copy to clipboard functionality
+gem "clipboard"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -34,7 +45,7 @@ gem "jbuilder"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -48,8 +59,17 @@ gem 'bootstrap-sass'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
+# TC added to make the modals work
+# gem 'bootstrap', '~> 5.1.3'
+#gem 'popper_js', '~> 1.9', '>= 1.9.9'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# gem 'jquery-rails'
+
+gem "font-awesome-rails"
+
+gem 'font-awesome-sass'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
