@@ -1,9 +1,8 @@
-
 <body>
 
 <div>
 
-<% @sauronQuotes.each do |quote,index| %>
+<% @gimliQuotes.each do |quote,index| %>
 
   <div id="<%= dom_id quote %>">
   <p>
@@ -21,6 +20,5 @@
  <% end %>
 
  <%= link_to "Full List", quotes_list_path %>
-
 
 </body>
