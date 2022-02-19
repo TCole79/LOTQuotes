@@ -3,4 +3,5 @@
 //= link clipboard.js
 //= link tolkien_api.js
 //= link dropdown.js
-import "./add_jquery.js";
+//= link modal.js
+// import "./add_jquery.js";

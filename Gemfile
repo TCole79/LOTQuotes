@@ -59,9 +59,13 @@ gem 'bootstrap-sass'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
+# TC added to make the modals work
+# gem 'bootstrap', '~> 5.1.3'
+#gem 'popper_js', '~> 1.9', '>= 1.9.9'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
 gem "font-awesome-rails"
 

@@ -23,12 +23,18 @@ body {
   object-fit: fill;
   min-width: 100%;
   min-height: 100%;
+<<<<<<< HEAD
   backdrop-filter: blur(4px); 
+=======
+  
+  //backdrop-filter: blur(4px)
+>>>>>>> 09266ee7c888ec13d0c38d2bd9e520031ef322e0
 }
 */
 
 h1 {
   font-family: "English";
+
 }
 /*
 h1:hover {
@@ -196,35 +202,39 @@ h1:hover {
   position: relative;
   display: inline-block;
 }
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.navbar {
+  color: black
 }
 
 .char-list {
@@ -269,7 +279,7 @@ font-weight: 700;
 }
 /*
 .body3 {
-  background-image: url('background3.jpg');
+  back  ground-image: url('background3.jpg');
   background-repeat:repeat-y;
   object-fit: fill;
   min-width: 100%;
