@@ -16,7 +16,7 @@
 
 /*
 body {
-  background-image: url('background1.jpg');
+  // background-image: url('background1.jpg');
   background-repeat: no-repeat;
   object-fit: fill;
   min-width: 100%;
@@ -52,6 +52,7 @@ h1:hover {
 .main-ring {
   display:flex;
   justify-content: center;
+  pointer-events: none;
 }
   .rotate {  
     width: 600px; 
@@ -99,6 +100,7 @@ h1:hover {
     top: 8px;
     left: 16px;
     color: black;
+    pointer-events: auto;
   }
   /* Top right text */
   .top-right {
@@ -121,6 +123,7 @@ h1:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
+    pointer-events: auto;
   } 
 
 .create-form {
@@ -154,7 +157,7 @@ h1:hover {
   position: absolute;
   top: 53.5%;
   left: 43.25%;
-  z-index:3;
+  pointer-events: auto;
 }
 
 /*--sign-in form css-- */
@@ -162,7 +165,7 @@ h1:hover {
   position: absolute;
   top: 61%;
   left: 42%;
-  z-index:3;
+  pointer-events: auto;
 }
 
 //// custom button code for clipboard copy/paste function ////

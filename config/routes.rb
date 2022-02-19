@@ -7,16 +7,29 @@ Rails.application.routes.draw do
   root "quotes#index"
   get "/quotes", to: "quotes#index"
   get "/tolkien", to: "quotes#tolkien"
-  get "/tolkien_character", to: "quotes#tolkien_character"
+  get "/tolkien_character/:name", to: "quotes#tolkien_character"
   get "/about", to: "about#index"
 
   get "/favorites", to: "favorites#index"
 
   get "/new_quote", to: "new_quote#index"
 
+
+  #routes for filtered routes 
+
   get "/quotes_list", to: "quotes_list#index"
 
+  get "/quotes_list/bilbo", to: "quotes_list#bilbo"
   
+  get "/quotes_list/sauron", to: "quotes_list#sauron"
+
+  get "/quotes_list/gimili", to: "quotes_list#gimili"
+
+  get "/quotes_list/aragorn", to: "quotes_list#aragorn"
+
+  get "/quotes_list/gandalf", to: "quotes_list#gandalf"
+
+
   
   resources :users
 

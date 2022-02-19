@@ -1,0 +1,23 @@
+<body>
+
+<div>
+
+<% @aragornQuotes.each do |quote,index| %>
+
+  <div id="<%= dom_id quote %>">
+  <p>
+    <strong>Quote content:</strong>
+    <%= quote.quote_content %>
+  </p>
+
+  <p>
+    <strong>Quote author:</strong>
+    <%= quote.quote_author %>
+  </p>
+ 
+</div>
+
+ <% end %>
+
+
+</body>
