@@ -23,12 +23,15 @@ Rails.application.routes.draw do
   
   get "/quotes_list/sauron", to: "quotes_list#sauron"
 
-  get "/quotes_list/gimili", to: "quotes_list#gimili"
+  get "/quotes_list/gimli", to: "quotes_list#gimli"
 
   get "/quotes_list/aragorn", to: "quotes_list#aragorn"
 
   get "/quotes_list/gandalf", to: "quotes_list#gandalf"
 
+  get "/quotes_list/legolas", to: "quotes_list#legolas"
+
+  get "/quotes_list/gollum", to: "quotes_list#gollum"
 
   
   resources :users

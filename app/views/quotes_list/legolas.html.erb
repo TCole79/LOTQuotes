@@ -1,8 +1,8 @@
 <body>
 
-<div>
+<div class= "char-list-id">
 
-<% @gimiliQuotes.each do |quote,index| %>
+<% @legolasQuotes.each do |quote,index| %>
 
   <div id="<%= dom_id quote %>">
   <p>
@@ -18,6 +18,8 @@
 </div>
 
  <% end %>
-
+ </div>
+ 
+ <%= link_to "Full List", quotes_list_path %>
 
 </body>
