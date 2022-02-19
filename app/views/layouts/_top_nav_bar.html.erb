@@ -7,14 +7,27 @@
   
   <section class="navbar-main">
     
-    <div class="nav-left"
+    <div class="nav-left">
+
       <%= link_to "/" do %>
         <%= fa_icon "home" %> Home
       <% end %>
    
       <%= link_to [:about] do %>
         <%= fa_icon "id-card" %> About Us
-      <% end %>  
+      <% end %>
+
+      <%= link_to 'https://twitter.com/MiddleE23501801' do %>
+        <%= fa_icon "twitter" %> 
+      <% end %>
+      
+      <%= link_to 'https://www.instagram.com/middleearth013/' do %>
+        <%= fa_icon "instagram" %> 
+      <% end %>
+      
+      <%= link_to 'https://www.youtube.com/channel/UCkDiXNTFKK72VV267kFbdxA' do %>
+        <%= fa_icon "google" %> 
+      <% end %>
     </div>
 
     <div class="nav-admin">
@@ -38,12 +51,12 @@
         <% if Current.user %>
         
           <%= link_to [:favorites] do %>
-            <%= fa_icon "star" %> Favorites
+            <%= fa_icon "star" %> Favorites 
           <% end %>
       </div>    
           
       <div class="user-log">      
-          Logged in as: <%= Current.user.name %><br>
+          Logged in as: <b><%= Current.user.name %></b><br>
           <%= link_to "Sign Out", log_out_path, method: :get %>
           
           <% else %>

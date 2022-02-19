@@ -16,17 +16,17 @@
   src: url("Dwarvish.ttf");
 }
 
-/*
-body {
-  // background-image: url('background1.jpg');
-  background-repeat: no-repeat;
-  object-fit: fill;
-  min-width: 100%;
-  min-height: 100%;
+
+// body {
+//   background-image: url('background3.jpg');
+//   background-repeat: no-repeat;
+//   object-fit: fill;
+//   min-width: 100%;
+//   min-height: 100%;
   
-  //backdrop-filter: blur(4px)
-}
-*/
+//   //backdrop-filter: blur(4px)
+// }
+
 
 h1 {
   font-family: "English";
@@ -226,7 +226,7 @@ h1:hover {
 
 .navbar-main {
   pointer-events: auto;
-  // background-image: url('thumb3.jpg');
+  background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;  
@@ -234,8 +234,9 @@ h1:hover {
   align-items: flex-end;
   justify-content: space-around;
   text-align: center;
+  text-shadow: #818a91;
   
-  color: black;
+  color:darkslategrey;
   font-size: medium;
   font-weight: 200;
   max-height: 150px;
