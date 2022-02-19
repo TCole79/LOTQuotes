@@ -224,7 +224,34 @@ h1:hover {
     opacity: 1;
   }
 
-.navbar {
-  color: black
+.navbar-main {
+  pointer-events: auto;
+  // background-image: url('thumb3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;  
+
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  
+  color: black;
+  font-size: medium;
+  font-weight: 200;
+  max-height: 150px;
+  min-height: 150px;
 }
- 
+  #nav-left {
+    left: 5px;
+    top: 125px;
+  }
+
+  #nav-user {
+    align-items:flex-end;
+    justify-content: space-evenly;
+    
+  }
+
+
+
+
