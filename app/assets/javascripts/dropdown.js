@@ -1,18 +1,3 @@
-// document.addEventListener("click", (e) => {
-//   const isDropdownButton = e.target.matches("[data-dropdown-button]");
-//   if (!isDropdownButton && e.target.closest("[data-dropdown]") !== null) return;
-
-//   let currentDropdown;
-//   if (isDropdownButton) {
-//     currentDropdown = e.target.closest("[data-dropdown]");
-//     currentDropdown.classList.toggle("active");
-//   }
-
-//   document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
-//     if (dropdown === currentDropdown) return;
-//     dropdown.classList.remove("active");
-//   });
-// });
 
 // this commented out code creates an event listener attached to the dropdown menu choice, and makes an API call based on that choice
 $(document).ready(function () {
