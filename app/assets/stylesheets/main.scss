@@ -3,6 +3,8 @@
 //@import "dropdown_buttons";
 @import "about_page";
 @import "ticker";
+@import "font-awesome";
+
 
 // custom fonts
 @font-face {
@@ -14,6 +16,7 @@
   src: url("Dwarvish.ttf");
 }
 
+/*
 body {
   // background-image: url('background1.jpg');
   background-repeat: no-repeat;
@@ -23,6 +26,7 @@ body {
   
   //backdrop-filter: blur(4px)
 }
+*/
 
 h1 {
   font-family: "English";
@@ -154,7 +158,7 @@ h1:hover {
   position: absolute;
   top: 53.5%;
   left: 43.25%;
-  z-index: 3;
+  pointer-events: auto;
 }
 
 /*--sign-in form css-- */
@@ -162,7 +166,7 @@ h1:hover {
   position: absolute;
   top: 61%;
   left: 42%;
-  z-index: 3;
+  pointer-events: auto;
 }
 
 //// custom button code for clipboard copy/paste function ////
@@ -189,7 +193,6 @@ h1:hover {
   position: relative;
   display: inline-block;
 }
-<<<<<<< HEAD
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
@@ -225,35 +228,3 @@ h1:hover {
   color: black
 }
  
-=======
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
->>>>>>> 50c2467e1e1528ff4e797cb24b51eb2f97ca8de4

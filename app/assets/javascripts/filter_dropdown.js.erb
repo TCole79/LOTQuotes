@@ -1,0 +1,10 @@
+$(document).ready(function()) {
+  $('.Bilbo').on('click') function(){
+    $ ajax({
+      url: '/quotes_list', 
+      type: 'POST',
+      success: () => Quote.where(quote_author: "Bilbo Bagen");
+
+    })
+  }
+}
