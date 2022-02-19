@@ -11,7 +11,6 @@ $(document).ready(function () {
     // request.setRequestHeader("Access-Control-Allow-Credentials", true);
     request.onload = function () {
       // Begin accessing JSON data here
-      //console.log("Data test", this.response);
       let data = JSON.parse(this.response);
 
       if (request.status >= 200 && request.status < 400) {
@@ -36,7 +35,6 @@ $(document).ready(function () {
         console.log("There was an error.");
       }
     };
-
     request.send();
   });
 
