@@ -1,93 +1,98 @@
 <%= javascript_include_tag('modal.js') %>
 
-<nav class="navbar navbar-default navbar-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
     
     </div>
   </div>
-  <div>
-
-  <li>
-    <%= link_to root_path do %>
-      <%= fa_icon "home" %> Home
-    <% end %>
-  </li>
-
+  
+  <section class="navbar-main">
     
-  <li>
-    <%= link_to [:about] do %>
-      <%= fa_icon "id-card" %> About Us
-    <% end %>
-  </li>  
-    
+    <div class="nav-left">
+      <div>
+        
+        <%= link_to root_path do %>
+          <%= fa_icon "home" %> Home
+        <% end %>             
+      
+        <%= link_to [:about] do %>
+          <%= fa_icon "id-card" %> About Us
+        <% end %>      
 
-  <li>
-    <%= link_to [:favorites] do %>
-      <%= fa_icon "star" %> Favorites
-    <% end %>
-  </li>
-  <li><%= link_to("Home", root_path)%></li>
-    <li><%= link_to 'About Us', [:about] %></li>
-
-    <!-- Button trigger modal -->
-    <button type="button" id="favoritesModal" class="btn btn-primary">Show Favourites</button>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Your Favourite Quotes</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
+        <%= link_to 'https://twitter.com/MiddleE23501801' do %>
+          <%= fa_icon "twitter" %> 
+        <% end %>
+        
+        <%= link_to 'https://www.instagram.com/middleearth013/' do %>
+          <%= fa_icon "instagram" %> 
+        <% end %>  
+        
+        <%= link_to 'https://www.youtube.com/channel/UCkDiXNTFKK72VV267kFbdxA' do %>
+          <%= fa_icon "google" %> 
+        <% end %>
       </div>
     </div>
 
-  </div>
+    <div class="nav-admin">
+      <% if Current.user && Current.user.admin %>
 
-  <% if Current.user && Current.user.admin %>
-    
-    <p> Welcome Dark Master </p>
-  
-  <li>
-    <%= link_to [:new_quote] do %>
-      <%= fa_icon "pencil" %> Create Quote
-    <% end %>
-  </li> 
-    
-  <li>
-    <%= link_to [:quotes_list] do %>
-      <%= fa_icon "list" %> List Quotes
-    <% end %>
-  </li>  
-    <li><%= link_to 'Create Quote',  [:new_quote] %></li>
-    
-
-
-  <% end %>
-
-
-  <ul class="nav navbar-nav">
-    <% if Current.user %>
-    <li><%= link_to 'Favorites',  [:favorites] %></li>
-      Logged in as: <%= Current.user.name %><br>
-      <%= button_to "Sign Out", log_out_path, method: :get %>
+        <p style="color:red"> <b>Welcome Dark Master</b> </p>
       
-      <% else %>
+        <%= link_to [:new_quote] do %>
+          <%= fa_icon "pencil" %> Create Quote
+        <% end %>
+            
+        <%= link_to [:quotes_list] do %>
+          <%= fa_icon "list" %> List Quotes
+        <% end %>
 
-      <li><%= link_to 'List Quotes',  [:quotes_list] %></li>
-      <%= link_to "Sign up", sign_up_path %>
-      <%= link_to "Sign In", sign_in_path %>
+        <%= link_to [:edit_list] do %>
+          <%=fa_icon "pencil" %> Edit Quotes
+          <% end %>
+      
+      <% end %>   
+    </div> 
 
-    <% end %>
-  </ul>
+    <div class="nav-user">
+      <div class="user-fav">
 
+      <% if Current.user %>
+         
+      <!-- Button trigger modal -->
+        <button type="button" id="favoritesModal" class="btn btn-primary">Show Favourites</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Your Favourite Quotes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+          
+      <div class="user-log">      
+          Logged in as: <b><%= Current.user.name %></b><br>
+          <%= link_to "Sign Out", log_out_path, method: :get %>
+          
+          <% else %>
+            
+          <%= link_to "Sign up", sign_up_path %>
+          <%= link_to "Sign In", sign_in_path %>
+        <% end %>
+      </div>  
+    </div>
+
+  </section>
+  
 </nav>

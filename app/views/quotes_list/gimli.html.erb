@@ -1,24 +1,16 @@
-<body>
-
-<div>
-
-<% @gimliQuotes.each do |quote,index| %>
-
-  <div id="<%= dom_id quote %>">
-  <p>
-    <strong>Quote content:</strong>
-    <%= quote.quote_content %>
-  </p>
-
-  <p>
-    <strong>Quote author:</strong>
-    <%= quote.quote_author %>
-  </p>
- 
+<div class="center">
+  <h1>Create a Auote</h1>
+  <form>
+    <div class="inputbox">
+      <input type="text" required="required">
+      <span>Quote</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required">
+      <span>AUthor</span>
+    </div>
+    <div class="inputbox">
+      <input type="button" value="submit">
+    </div>
+  </form>
 </div>
-
- <% end %>
-
- <%= link_to "Full List", quotes_list_path %>
-
-</body>

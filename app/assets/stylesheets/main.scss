@@ -4,33 +4,46 @@
 @import "about_page";
 @import "ticker";
 @import "font-awesome";
+@import "quote_list.scss";
+@import "form_sign_in";
+@import "ring";
 
 
 // custom fonts
+
 @font-face {
-  font-family: "Moria";
-  src: url("MoriaScript.ttf");
+  font-family: "Aniron";
+  src: url("Aniron.ttf");
 }
 @font-face {
   font-family: "Dwarvish";
   src: url("Dwarvish.ttf");
 }
 
-/*
-body {
-  background-image: url('background7.jpg');
-  background-repeat: no-repeat;
-  object-fit: fill;
-  min-width: 100%;
-  min-height: 100%;
-<<<<<<< HEAD
-  backdrop-filter: blur(4px); 
-=======
-  
-  //backdrop-filter: blur(4px)
->>>>>>> 09266ee7c888ec13d0c38d2bd9e520031ef322e0
+@font-face {
+  font-family: "MiddleEath";
+  src: url("MiddleEarth.ttf");
 }
-*/
+main{
+  margin-top: 120px;
+  margin-left: 50px;
+  margin-right:50px;
+}
+
+//body { 
+  //background-color: rgb(182, 29, 29);
+  //bottom:100px;
+  //background-image: url('background7.jpg');
+  //background-repeat: no-repeat;
+  //object-fit: fill;
+  //min-width: 100%;
+  //min-height: 100%;
+  //backdrop-filter: blur(4px); 
+//}
+
+a:hover {
+  color: #9b620d;
+} 
 
 h1 {
   font-family: "English";
@@ -59,36 +72,6 @@ h1:hover {
   display: flex;
   justify-content: center;
   //pointer-events: none;
-}
-.rotate {
-  width: 600px;
-  filter: hue-rotate(0deg);
-  transition: filter 5s ease-in-out;
-  animation: rotation 120s infinite linear;
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-.rotate2 {
-  width: 700px;
-  filter: hue-rotate(0deg);
-  transition: filter 30s ease-in-out;
-  animation: rotation 120s infinite linear;
-  z-index: 1;
-}
-.rotate2:hover {
-  filter: hue-rotate(1070deg);
-  transition: filter 30s ease-in-out;
-
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(1079deg);
-  }
 }
 
 //// Container holding the About image and the text ////
@@ -137,18 +120,14 @@ h1:hover {
 }
 
 .create-form {
+  margin-top: 320px;
   display: flex;
   justify-content: center;
   position: absolute;
-  z-index: 1;
-  top: 43.5%;
+  z-index: 3;
+ 
 }
-.rotate3 {
-  width: 700px;
-  filter: hue-rotate(330deg);
-  animation: rotation 120s infinite linear;
-  position: absolute;
-}
+
 .main-ring2 {
   display: flex;
   justify-content: center;
@@ -167,14 +146,6 @@ h1:hover {
   position: absolute;
   top: 53.5%;
   left: 43.25%;
-  pointer-events: auto;
-}
-
-/*--sign-in form css-- */
-.centered-signin {
-  position: absolute;
-  top: 61%;
-  left: 42%;
   pointer-events: auto;
 }
 
@@ -233,65 +204,37 @@ h1:hover {
     opacity: 1;
   }
 
-.navbar {
-  color: black
-}
-
-.char-list {
-  display:flex;
-  justify-content:space-around;
-}
-
-.char-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.char-pic {
-  width:160px;
-  z-index: 1;
-}
-
-
-.char-pic:hover {
-  filter:opacity(0.7);
-  //filter:hue-rotate(30deg);
+  .navbar-main {
+    pointer-events: auto;
+    //background-image: url('fluffy3-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    
+    display: flex;  
+    align-items: flex-end;
+    justify-content:space-between;
+    
+    font-family: "Aniron";  
+    color:black;
+    font-size: medium;
+    font-weight: 200;
+    max-height: 75px;
+    min-height: 75px;
   
-}
-.char-name {
-position:relative;
-text-align: center;
-font-weight: 700;
-}
+    .nav-left {
+      align-items: flex-end;
+    }
+  
+    .nav-user {
+      align-items:flex-end;
+      text-align: right;    
+    }
+  
+    .nav-admin {
+      align-items: flex-end;
+      text-align: center;
+    }
+  }
 
-.list-title {
-  text-align: center;
-  font-weight: 900;
-  font-size: xx-large;
-}
 
-.list-quotes {
-  text-align: center;
-  font-style: italic;
-  filter: opacity(0.5);
-  font-size: medium;
-  font-weight: 900;
-}
-/*
-.body3 {
-  back  ground-image: url('background3.jpg');
-  background-repeat:repeat-y;
-  object-fit: fill;
-  min-width: 100%;
-  min-height: 100%;
-  backdrop-filter: blur(5px); 
-}
-*/
-
-.char-list-id { 
-  font-style: italic;
-  filter: opacity(0.5);
-  font-size: medium;
-  font-weight: 900;
-
-}

@@ -1,0 +1,49 @@
+.rotate {
+  width: 800px;
+  filter: hue-rotate(0deg);
+  transition: filter 5s ease-in-out;
+  animation: rotation 120s infinite linear;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+.rotate2 {
+  margin-top:50px;
+  width: 900px;
+  filter: hue-rotate(0deg);
+  transition: filter 30s ease-in-out;
+  animation: rotation 120s infinite linear;
+  z-index: 1;
+}
+
+.rotate3 {
+  margin-top:80px;
+  width: 900px;
+  filter: hue-rotate(330deg);
+  animation: rotation 120s infinite linear;
+  position: absolute;
+}
+
+.rotate4 {
+  width: 800px;
+  filter: hue-rotate(0deg);
+  animation: rotation 120s infinite linear;
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.rotate2:hover {
+  filter: hue-rotate(1070deg);
+  transition: filter 30s ease-in-out;
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1079deg);
+  }
+}

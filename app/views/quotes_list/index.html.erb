@@ -1,7 +1,7 @@
 
 
-<body class= "body3">
-
+<body>
+<main class"main-char">
 <div class="char-list">
 
 
@@ -99,24 +99,21 @@
   <% @quotes.each do |quote,index| %>
     <div id="<%= dom_id quote %>">
   <p>
-    <%= quote.quote_content %>
+    "<%= quote.quote_content %>"
   </p>
   <p>
-    <%= quote.quote_author %>
+    --<%= quote.quote_author %>
   </p>
 
   </div>
-    
-    <p class= "show-this-quote"> 
-      <%= link_to "Show this quote", quote %>
-    </p>
+    <br>
     <br>
   
   <% end %>
 
 
 <%= link_to "New quote", new_quote_path %>
-
+</main>
 
 
 

@@ -1,25 +1,41 @@
 <body>
 
-<div class= "char-list-id">
+<main>
+<div class="char-main">
+
+<div class="char-list-id">
 
 <% @legolasQuotes.each do |quote,index| %>
 
   <div id="<%= dom_id quote %>">
   <p>
-    <strong>Quote content:</strong>
+ 
     <%= quote.quote_content %>
   </p>
 
   <p>
-    <strong>Quote author:</strong>
-    <%= quote.quote_author %>
-  </p>
- 
+    <br>
+    <br>
+    <br>
+  
 </div>
 
+
  <% end %>
- </div>
  
- <%= link_to "Full List", quotes_list_path %>
+ <%= link_to "Back", quotes_list_path %>
+
+ </div>
+  
+ <div class= "char-portrait">
+ <%= image_tag "gandalf2.png" %>
+
+
+</div>
+
+
+
+ </main>
 
 </body>
+
