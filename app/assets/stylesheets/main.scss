@@ -16,32 +16,56 @@
   font-family: "Dwarvish";
   src: url("Dwarvish.ttf");
 }
-
-/*
-body {
-  background-image: url('background7.jpg');
-  background-repeat: no-repeat;
-  object-fit: fill;
-  min-width: 100%;
-  min-height: 100%;
-<<<<<<< HEAD
-  backdrop-filter: blur(4px); 
-=======
-  
-  //backdrop-filter: blur(4px)
->>>>>>> 09266ee7c888ec13d0c38d2bd9e520031ef322e0
+@font-face {
+  font-family: "Aniron";
+  src: url("Aniron.ttf");
 }
-*/
+
+ HEAD
+
+// body {
+//   background-image: url('background3.jpg');
+//   background-repeat: no-repeat;
+//   object-fit: fill;
+//   min-width: 100%;
+//   min-height: 100%;
+  
+//   //backdrop-filter: blur(4px)
+// }
+
+main {
+  margin-top: 400px;
+}
+
+body {
+  margin-bottom: 400px;
+  background-color: #555;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  color: black;
+
+}
+
 
 h1 {
-  font-family: "English";
+  font-family: "Aniron";
+  text-shadow: rgb(224, 10, 10);
 
 }
-/*
+
 h1:hover {
   font-family: "Moria";
 }
-*/
+
+
+h2 {
+  font-family: "Aniron";
+  display: flex;
+  justify-content: center;
+}
+h2:hover {
+  font-family: "Moria";
+}
+
 
 .generate-button-div {
   display: flex;
@@ -122,10 +146,13 @@ h1:hover {
 }
 /* Bottom right text */
 .bottom-right {
+ 
+  font-family: Aniron;
   position: absolute;
   bottom: 8px;
   right: 16px;
-  color: black;
+  color: rgb(245, 184, 30);
+  
 }
 /* Centered text */
 .centered {
@@ -135,6 +162,7 @@ h1:hover {
   transform: translate(-50%, -50%);
   color: black;
   pointer-events: auto;
+  font-family: "Aniron";
 }
 
 .create-form {
@@ -179,11 +207,110 @@ h1:hover {
   pointer-events: auto;
 }
 
-
-
-.navbar {
-  color: black
+//// custom button code for clipboard copy/paste function ////
+.btn-clipboard {
+  position: relative;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  font-size: 75%;
+  color: #818a91;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.25rem;
 }
+.btn-clipboard:hover {
+  color: #fff;
+  background-color: #027de7;
+}
+// custom tooltip css for clipboard copy/paste function - NOT FINISHED
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+.navbar {
+  background-color:moccasin;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+}
+.navbar-main {
+  pointer-events: auto;
+  //background-image: url('fluffy3-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  
+  display: flex;  
+  align-items: flex-end;
+  justify-content:space-between;
+  
+  font-family: "Aniron";
+  color:black;
+  font-size: medium;
+  font-weight: 200;
+  max-height: 75px;
+  min-height: 75px;
+  
+
+  .nav-left {
+    align-items: flex-end;
+    text-align: center;
+    justify-content:space-between;  
+  }
+
+  .nav-user {
+    align-items:flex-end;
+    text-align: center;
+    justify-content:space-between;    
+  }
+
+  .nav-admin {
+    align-items: flex-end;
+    text-align: center;
+    justify-content:space-between;
+  }
+
+  .user-fav {
+    align-items: flex-end;
+    text-align: center;
+    justify-content:space-between;
+  }
+}
+
+
+
 
 .char-list {
   display:flex;
@@ -243,3 +370,5 @@ font-weight: 700;
   font-weight: 900;
 
 }
+
+

@@ -6,21 +6,19 @@
     
     </div>
   </div>
-  <div>
-
-  <li>
-    <%= link_to root_path do %>
-      <%= fa_icon "home" %> Home
-    <% end %>
-  </li>
-
+  
+  <section class="navbar-main">
     
-  <li>
-    <%= link_to [:about] do %>
-      <%= fa_icon "id-card" %> About Us
-    <% end %>
-  </li>  
-    
+    <div class="nav-left">
+      <div>
+        
+        <%= link_to root_path do %>
+          <%= fa_icon "home" %> Home
+        <% end %>             
+      
+        <%= link_to [:about] do %>
+          <%= fa_icon "id-card" %> About Us
+        <% end %>      
 
   <li>
     <%= link_to [:favorites] do %>
@@ -52,43 +50,51 @@
 
 
 
-  </div>
+    <div class="nav-admin">
+      <% if Current.user && Current.user.admin %>
 
-  <% if Current.user && Current.user.admin %>
-    
-    <p> Welcome Dark Master </p>
-  
-  <li>
-    <%= link_to [:new_quote] do %>
-      <%= fa_icon "pencil" %> Create Quote
-    <% end %>
-  </li> 
-    
-  <li>
-    <%= link_to [:quotes_list] do %>
-      <%= fa_icon "list" %> List Quotes
-    <% end %>
-  </li>  
-    <li><%= link_to 'Create Quote',  [:new_quote] %></li>
-    
-
-
-  <% end %>
-
-
-  <ul class="nav navbar-nav">
-    <% if Current.user %>
-    <li><%= link_to 'Favorites',  [:favorites] %></li>
-      Logged in as: <%= Current.user.name %><br>
-      <%= button_to "Sign Out", log_out_path, method: :get %>
+        <p style="color:red"> <b>Welcome Dark Master</b> </p>
       
-      <% else %>
+        <%= link_to [:new_quote] do %>
+          <%= fa_icon "pencil" %> Create Quote
+        <% end %>
 
-      <li><%= link_to 'List Quotes',  [:quotes_list] %></li>
-      <%= link_to "Sign up", sign_up_path %>
-      <%= link_to "Sign In", sign_in_path %>
+        <%= link_to [:quotes_list] do %>
+          <%= fa_icon "pencil" %> Edit Quotes
+        <% end %>         
+        
+      
+      <% end %>   
+    </div> 
 
-    <% end %>
-  </ul>
+    
+      <div class="user-fav">
 
+        <% if Current.user %>
+        <p style="color:green">Logged in as: <b><%= Current.user.name %></b></p>
+
+        <%= link_to [:quotes_list] do %>
+          <%= fa_icon "list" %> List Quotes
+        <% end %>
+
+        
+          
+        <!-- Button trigger modal -->
+
+
+          
+      <div class="user-log">      
+          
+          <%= link_to "Sign Out", log_out_path, method: :get %>
+          
+          <% else %>
+            
+          <%= link_to "Sign up", sign_up_path %>
+          <%= link_to "Sign In", sign_in_path %>
+          <% end %>
+      </div>  
+    </div>
+
+  </section>
+  
 </nav>
