@@ -1,5 +1,4 @@
 
-
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -24,6 +23,9 @@ a {
   margin: 0 auto;
 }
 .news {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 76%;
   background: #cc4444;
   padding: 0 2%;
@@ -35,9 +37,9 @@ a {
   position: relative;
 }
 .title:after {
-  position: relative;
+  position: absolute;
   content: "";
-  right: -16%;
+  right: -27%;
   border-left: 20px solid #c81c1c;
   border-top: 33px solid transparent;
   border-right: 20px solid transparent;

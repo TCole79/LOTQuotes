@@ -3,6 +3,7 @@
 //@import "dropdown_buttons";
 @import "about_page";
 @import "ticker";
+@import "clipboard_buttons";
 @import "font-awesome";
 
 
@@ -169,60 +170,7 @@ h1:hover {
   pointer-events: auto;
 }
 
-//// custom button code for clipboard copy/paste function ////
-.btn-clipboard {
-  position: relative;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 10;
-  display: block;
-  padding: 0.25rem 0.5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0.25rem;
-}
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7;
-}
-// custom tooltip css for clipboard copy/paste function - NOT FINISHED
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+
 
 .navbar {
   color: black

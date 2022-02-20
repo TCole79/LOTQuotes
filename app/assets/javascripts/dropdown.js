@@ -23,7 +23,7 @@ $(document).ready(function () {
     $.ajax({
       url: `/tolkien_character/${selectedOption}`,
       success: function (data) {
-        $(".quoteByAuthor").text(data.text + " ~ " + data.character);
+        $("#tolkien").text(`"${data.text}" ~ ${data.character}`);
       },
       error: function () {
         alert("There was an error.");
