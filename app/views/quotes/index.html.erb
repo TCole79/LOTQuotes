@@ -8,7 +8,7 @@
 
     <h1>The Lord of the Quotes</h1>
 
-    <h1>What has Middle Earth been saying? </h1>
+    <h2>What has Middle Earth been saying? </h2>
 
 
 
@@ -30,7 +30,7 @@
           </form>
         </div>
         <div class="top-right quoteByAuthor"> <%= @tolkien_character["text"] %> ~ <%= @tolkien_character["character"] %> </div>
-        <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
+        <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong> <br>
           <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
         </div>
         <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>

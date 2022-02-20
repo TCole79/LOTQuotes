@@ -36,23 +36,32 @@ main {
   margin-top: 400px;
 }
 
-// body {
+body {
+  margin-bottom: 400px;
+  background-color: #555;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  color: goldenrod;
 
- 
-  
-
-// }
+}
 
 
 h1 {
-  font-family: "English";
+  font-family: "Aniron";
 
 }
-/*
+
 h1:hover {
   font-family: "Moria";
 }
-*/
+
+
+h2 {
+  font-family: "Aniron";
+}
+h2:hover {
+  font-family: "Moria";
+}
+
 
 .generate-button-div {
   display: flex;
@@ -133,10 +142,13 @@ h1:hover {
 }
 /* Bottom right text */
 .bottom-right {
+  border: 1px solid rgb(66, 66, 66) ;
+  font-family: Aniron;
   position: absolute;
   bottom: 8px;
   right: 16px;
-  color: black;
+  color: goldenrod;
+  
 }
 /* Centered text */
 .centered {
@@ -246,6 +258,7 @@ h1:hover {
   }
 .navbar {
   background-color:moccasin;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
 }
 .navbar-main {
   pointer-events: auto;
@@ -264,6 +277,7 @@ h1:hover {
   font-weight: 200;
   max-height: 75px;
   min-height: 75px;
+  
 
   .nav-left {
     align-items: flex-end;
