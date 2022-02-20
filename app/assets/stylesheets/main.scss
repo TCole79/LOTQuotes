@@ -248,30 +248,33 @@ h1:hover {
   //background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  
   display: flex;  
-
   align-items: flex-end;
-  justify-content: space-around;
-  text-align: center;
-  text-shadow: #818a91;
+  justify-content:space-between;
+  
   
   color:black;
   font-size: medium;
   font-weight: 200;
-  max-height: 150px;
-  min-height: 150px;
-}
-  #nav-left {
-    left: 5px;
-    top: 125px;
+  max-height: 75px;
+  min-height: 75px;
+
+  .nav-left {
+    align-items: flex-end;
   }
 
-  #nav-user {
+  .nav-user {
     align-items:flex-end;
-    justify-content: space-evenly;
-    
+    text-align: right;    
   }
 
+  .nav-admin {
+    align-items: flex-end;
+    text-align: center;
+  }
+}
 
 
 

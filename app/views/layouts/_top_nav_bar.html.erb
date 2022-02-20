@@ -1,6 +1,6 @@
 <%= javascript_include_tag('modal.js') %>
 
-<nav class="navbar navbar-default navbar-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
     
@@ -53,12 +53,8 @@
     <div class="nav-user">
       <div class="user-fav">
 
-        <% if Current.user %>
-        
-          <%= link_to [:favorites] do %>
-            <%= fa_icon "star" %> Favorites 
-          <% end %>
-      </div>   
+      <% if Current.user %>
+         
       <!-- Button trigger modal -->
         <button type="button" id="favoritesModal" class="btn btn-primary">Show Favourites</button>
         <!-- Modal -->
