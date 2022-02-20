@@ -1,3 +1,4 @@
+// this code for the main page copy button
 const copyToClipboard = function() {
   const copyText = document.querySelector(".quote");
   navigator.clipboard.writeText(copyText.innerText).then(() => {
