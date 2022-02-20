@@ -4,4 +4,5 @@
 //= link tolkien_api.js
 //= link dropdown.js
 //= link modal.js
+//= link application.js
 // import "./add_jquery.js";

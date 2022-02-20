@@ -1,119 +1,123 @@
 
 
 <body>
-<main class"main-char">
-<div class="char-list">
+
+  <main>
+    <div class="char-list">
 
 
-<div class "char-box" class="bilbo">
-<div>
-<%= link_to quotes_list_bilbo_path do %>
-  <%= image_tag "bilbo3.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-  <%= link_to "Bilbo Baggins", quotes_list_bilbo_path  %>
-  </div>
-</div>
+    <div class "char-box" class="bilbo">
+    <div>
+    <%= link_to quotes_list_bilbo_path do %>
+      <%= image_tag "bilbo3.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+      <%= link_to "Bilbo Baggins", quotes_list_bilbo_path  %>
+      </div>
+    </div>
 
 
-<div class "char-box" class="aragorn">
-<div>
-<%= link_to quotes_list_aragorn_path do %>
-  <%= image_tag "aragorn.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-  <%= link_to "Aragorn", quotes_list_aragorn_path %>
-  </div>
-</div>
+    <div class "char-box" class="aragorn">
+    <div>
+    <%= link_to quotes_list_aragorn_path do %>
+      <%= image_tag "aragorn.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+      <%= link_to "Aragorn", quotes_list_aragorn_path %>
+      </div>
+    </div>
 
-<div class "char-box" class= "gandalf">
-<div>
-<%= link_to quotes_list_gandalf_path do %>
-  <%= image_tag "gandalf.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-<%= link_to "Gandalf", quotes_list_gandalf_path %>
-</div>
-</div>  
+    <div class "char-box" class= "gandalf">
+    <div>
+    <%= link_to quotes_list_gandalf_path do %>
+      <%= image_tag "gandalf.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+    <%= link_to "Gandalf", quotes_list_gandalf_path %>
+    </div>
+    </div>  
 
-<div  class "char-box" class= "sauron">
-<div>
-<%= link_to quotes_list_sauron_path do %>
-  <%= image_tag "sauron.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-<%= link_to "Sauron", quotes_list_sauron_path %>
-</div>
-</div>  
-
-
-
-<div class "char-box" class= "gimli">
-<div>
-<%= link_to quotes_list_gimli_path do %>
-  <%= image_tag "gimli.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-<%= link_to "Gimli", quotes_list_gimli_path %>
-</div>
-</div>  
-
-<div class "char-box" class= "legolas">
-<div>
-<%= link_to quotes_list_legolas_path do %>
-  <%= image_tag "legolas.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-<%= link_to "Legolas", quotes_list_legolas_path %>
-</div>
-</div>  
-
-<div class "char-box" class= "gollum">
-<div>
-<%= link_to quotes_list_gollum_path do %>
-  <%= image_tag "gollum.png", class: "char-pic" %>
-<% end %>
-  </div> 
-  <div class="char-name">
-<%= link_to "Gollum", quotes_list_gollum_path %>
-</div>
-</div>  
-
-</div>
-<br>
-
-<h1 class= "list-title">Whispers of Middle Earth</h1>
-
-<br>
+    <div  class "char-box" class= "sauron">
+    <div>
+    <%= link_to quotes_list_sauron_path do %>
+      <%= image_tag "sauron.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+    <%= link_to "Sauron", quotes_list_sauron_path %>
+    </div>
+    </div>  
 
 
 
-<div class="list-quotes">
+    <div class "char-box" class= "gimli">
+    <div>
+    <%= link_to quotes_list_gimli_path do %>
+      <%= image_tag "gimli.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+    <%= link_to "Gimli", quotes_list_gimli_path %>
+    </div>
+    </div>  
 
-  <% @quotes.each do |quote,index| %>
-    <div id="<%= dom_id quote %>">
-  <p>
-    "<%= quote.quote_content %>"
-  </p>
-  <p>
-    --<%= quote.quote_author %>
-  </p>
+    <div class "char-box" class= "legolas">
+    <div>
+    <%= link_to quotes_list_legolas_path do %>
+      <%= image_tag "legolas.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+    <%= link_to "Legolas", quotes_list_legolas_path %>
+    </div>
+    </div>  
 
-  </div>
+    <div class "char-box" class= "gollum">
+    <div>
+    <%= link_to quotes_list_gollum_path do %>
+      <%= image_tag "gollum.png", class: "char-pic" %>
+    <% end %>
+      </div> 
+      <div class="char-name">
+    <%= link_to "Gollum", quotes_list_gollum_path %>
+    </div>
+    </div>  
+
+    </div>
     <br>
+
+    <h1 class= "list-title">Whispers of Middle Earth</h1>
+
     <br>
-  
-  <% end %>
 
 
-<%= link_to "New quote", new_quote_path %>
-</main>
+
+    <div class="list-quotes">
+
+      <% @quotes.each do |quote,index| %>
+        <div id="<%= dom_id quote %>">
+      <p>
+        <%= quote.quote_content %>
+      </p>
+      <p>
+        <%= quote.quote_author %>
+      </p>
+
+      </div>
+        
+        <p class= "show-this-quote"> 
+          <%= link_to "Show this quote", quote %>
+        </p>
+        <br>
+      
+      <% end %>
+
+
+    <%= link_to "New quote", new_quote_path %>
+  </main>
 
 
 

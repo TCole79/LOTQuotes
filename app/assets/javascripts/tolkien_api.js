@@ -1,22 +1,23 @@
 $(document).ready(function () {
+  $(".unFavorite").hide();
+
   let quoteId = $(".favorite").data("quote-id");
   let quote = {};
   console.log("quoteId", quoteId);
 
   $(".generate-button").on("click", function () {
+    
     let request = new XMLHttpRequest();
 
     request.open("GET", "http://localhost:3000/tolkien", true);
-    // request.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    // request.setRequestHeader("Access-Control-Allow-Credentials", true);
+
     request.onload = function () {
-      // Begin accessing JSON data here
       let data = JSON.parse(this.response);
 
       if (request.status >= 200 && request.status < 400) {
         document.getElementById(
           "tolkien"
-        ).innerHTML = `${data.text} ~ ${data.character}`;
+        ).innerHTML = `"${data.text}" ~ ${data.character}`;
         quoteId = data.id;
         quote = data;
         let arr = localStorage.getItem("favorite");
@@ -30,7 +31,6 @@ $(document).ready(function () {
             $(".favorite").show();
           }
         }
-        // $(".favorite").attr("data-quote-id", data.id);
       } else {
         console.log("There was an error.");
       }
@@ -39,7 +39,6 @@ $(document).ready(function () {
   });
 
   // toggle favorite
-  // let id = $(".favorite").data("quote-id");
   let arr = localStorage.getItem("favorite");
   if (arr !== null) {
     arr = arr.split(",");
@@ -53,7 +52,6 @@ $(document).ready(function () {
   }
 
   $(".favorite").on("click", (event) => {
-    // let id = $(".favorite").data("quote-id");
     let arr = localStorage.getItem("favorite");
     let favoriteQuotes = localStorage.getItem("favoriteQuotes");
     favoriteQuotes = JSON.parse(favoriteQuotes);
