@@ -40,13 +40,14 @@ body {
   margin-bottom: 400px;
   background-color: #555;
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-  color: goldenrod;
+  color: rgb(245, 184, 30);
 
 }
 
 
 h1 {
   font-family: "Aniron";
+  text-shadow: rgb(224, 10, 10);
 
 }
 
@@ -57,6 +58,8 @@ h1:hover {
 
 h2 {
   font-family: "Aniron";
+  display: flex;
+  justify-content: center;
 }
 h2:hover {
   font-family: "Moria";
@@ -147,7 +150,7 @@ h2:hover {
   position: absolute;
   bottom: 8px;
   right: 16px;
-  color: goldenrod;
+  color: rgb(245, 184, 30);
   
 }
 /* Centered text */
@@ -158,6 +161,7 @@ h2:hover {
   transform: translate(-50%, -50%);
   color: black;
   pointer-events: auto;
+  font-family: "Aniron";
 }
 
 .create-form {
