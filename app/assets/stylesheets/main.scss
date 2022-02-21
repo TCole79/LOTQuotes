@@ -21,7 +21,7 @@
   src: url("Aniron.ttf");
 }
 
- HEAD
+HEAD
 
 // body {
 //   background-image: url('background3.jpg');
@@ -42,29 +42,27 @@ body {
   background-color: #555;
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
   color: black;
-
 }
 
 
 h1 {
   font-family: "Aniron";
   text-shadow: rgb(224, 10, 10);
-
+  display: flex;
+  justify-content: center;
 }
-
-h1:hover {
-  font-family: "Moria";
-}
-
+// h1:hover {
+//   font-family: "Moria";
+// }
 
 h2 {
   font-family: "Aniron";
   display: flex;
   justify-content: center;
 }
-h2:hover {
-  font-family: "Moria";
-}
+// h2:hover {
+//   font-family: "Moria";
+// }
 
 
 .generate-button-div {
@@ -146,7 +144,7 @@ h2:hover {
 }
 /* Bottom right text */
 .bottom-right {
- 
+
   font-family: Aniron;
   position: absolute;
   bottom: 8px;
@@ -207,60 +205,7 @@ h2:hover {
   pointer-events: auto;
 }
 
-//// custom button code for clipboard copy/paste function ////
-.btn-clipboard {
-  position: relative;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 10;
-  display: block;
-  padding: 0.25rem 0.5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0.25rem;
-}
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7;
-}
-// custom tooltip css for clipboard copy/paste function - NOT FINISHED
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+
 .navbar {
   background-color:moccasin;
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
@@ -370,5 +315,3 @@ font-weight: 700;
   font-weight: 900;
 
 }
-
-

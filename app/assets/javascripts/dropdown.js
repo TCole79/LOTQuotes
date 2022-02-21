@@ -1,4 +1,3 @@
-
 // this commented out code creates an event listener attached to the dropdown menu choice, and makes an API call based on that choice
 $(document).ready(function () {
   console.log("ready!");
@@ -15,7 +14,6 @@ $(document).ready(function () {
   //     },
   //   });
   // });
-  
   // this code takes the value of the dropdown above, and links it to the 'fetch-specific-quote' button so you can make more API calls to the API for the character choice but without selecting the dropdown over and over
   $(".fetch-specific-quote").on("click", (event) => {
     event.preventDefault();
