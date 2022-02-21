@@ -33,6 +33,8 @@ Rails.application.routes.draw do
 
   get "/quotes_list/gollum", to: "quotes_list#gollum"
 
+  get "edit_list", to: "edit_list#editlist"
+
   
   resources :users
 

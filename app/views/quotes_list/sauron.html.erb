@@ -1,26 +1,30 @@
 
+<script src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
 <body>
+<div id="formWrapper">
 
-<div>
+<div id="form">
+<div class="logo">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 458.8 167.5" enable-background="new 0 0 458.8 167.5" xml:space="preserve">
 
-<% @sauronQuotes.each do |quote,index| %>
+	<p>Create Quotes</p>
 
-  <div id="<%= dom_id quote %>">
-  <p>
-    <strong>Quote content:</strong>
-    <%= quote.quote_content %>
-  </p>
-
-  <p>
-    <strong>Quote author:</strong>
-    <%= quote.quote_author %>
-  </p>
- 
+</svg>
 </div>
-
- <% end %>
-
- <%= link_to "Full List", quotes_list_path %>
-
-
+		<div class="form-item">
+			<p class="formLabel">Quote</p>
+			<input type="Quote" name="Quote" id="email" class="form-style" autocomplete="off"/>
+		</div>
+		<div class="form-item">
+			<p class="formLabel">Author</p>
+			<input type="Author" name="Author" id="password" class="form-style" />
+			<br>
+		<div class="form-item">
+		
+		<input type="submit" class="login pull-right" value="Add Quote">
+		<div class="clear-fix"></div>
+		</div>
+</div>
+</div>
 </body>
+</html>

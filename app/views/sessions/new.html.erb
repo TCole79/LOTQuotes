@@ -1,18 +1,26 @@
-<h1>Sign In </h1>
+<main>
 
 <div class="main-ring">
 <img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
-  <div class="centered-signin">
-      <%= form_with url: sign_in_path do |f| %>
 
-        <%= f.label :Email, style: "display: block" %>
-        <%= f.text_field :email %>
 
-        <%= f.label :Password, style: "display: block" %>
-        <%= f.password_field :password %>
+<div class="centered-signin">
 
-        <%= f.submit "Sign in" %>
-      <% end %>
-      <%= render "layouts/flash" %>
-  </div>  
+<div class="loginBox"> <%= image_tag "tree2.png", class: "user" %>
+    <form action="/sign_in" method="post">
+        <div class="inputBox"> <input id="uname" type="text" name="email" placeholder="Email"> <input id="pass" type="password" name="password" placeholder="Password"> </div> <input type="submit" value="Login">
+    </form> <a href="#">Forget Password<br> </a>
+    <div class="text-center">
+        <p style="color: #59238F;">Sign-Up</p>
+    </div>
 </div>
+
+</div>  
+      <%= render "layouts/flash" %>
+  
+</div>
+
+
+
+
+

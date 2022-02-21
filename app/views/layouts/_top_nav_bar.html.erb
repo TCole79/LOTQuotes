@@ -1,6 +1,6 @@
 <%= javascript_include_tag('modal.js') %>
 
-<nav class="navbar navbar-default navbar-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
     
@@ -20,6 +20,19 @@
           <%= fa_icon "id-card" %> About Us
         <% end %>      
 
+        <%= link_to 'https://twitter.com/MiddleE23501801' do %>
+          <%= fa_icon "twitter" %> 
+        <% end %>
+        
+        <%= link_to 'https://www.instagram.com/middleearth013/' do %>
+          <%= fa_icon "instagram" %> 
+        <% end %>  
+        
+        <%= link_to 'https://www.youtube.com/channel/UCkDiXNTFKK72VV267kFbdxA' do %>
+          <%= fa_icon "google" %> 
+        <% end %>
+      </div>
+    </div>
   <li>
     <%= link_to [:favorites] do %>
       <%= fa_icon "star" %> Favorites
@@ -58,11 +71,14 @@
         <%= link_to [:new_quote] do %>
           <%= fa_icon "pencil" %> Create Quote
         <% end %>
-
+            
         <%= link_to [:quotes_list] do %>
-          <%= fa_icon "pencil" %> Edit Quotes
-        <% end %>         
-        
+          <%= fa_icon "list" %> List Quotes
+        <% end %>
+
+        <%= link_to [:edit_list] do %>
+          <%=fa_icon "pencil" %> Edit Quotes
+          <% end %>
       
       <% end %>   
     </div> 
@@ -80,7 +96,6 @@
         
           
         <!-- Button trigger modal -->
-
 
           
       <div class="user-log">      
