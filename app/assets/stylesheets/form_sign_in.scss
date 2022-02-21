@@ -3,7 +3,6 @@
 
 
 .centered-signin {
-  margin-top: 20%;
   pointer-events: auto;
   z-index:3;
 }
@@ -15,7 +14,7 @@
 
 .loginBox {
   position: absolute;
-  top: 50%;
+  margin-top: 21%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 350px;
