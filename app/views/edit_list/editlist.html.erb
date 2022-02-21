@@ -7,18 +7,7 @@
 
 <div class="list-quotes">
 
-
-<table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Quote</th>
-          <th>Author ID</th>
-          <th>Edit </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-       <% @quotes.each do |quote,index| %>
+<% @quotes.each do |quote,index| %>
   <div id="<%= dom_id quote %>">
 <p>
   <%= quote.quote_content %>
@@ -33,14 +22,10 @@
     <%= link_to "Edit Quote", quote %>
    
   </p>
-  <b
+  <br>
 
 <% end %>
 </div>
-      </tbody>
-    </table>
-
-
 
 </main> 
 

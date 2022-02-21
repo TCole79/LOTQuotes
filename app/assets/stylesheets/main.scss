@@ -8,6 +8,7 @@
 @import "quote_list.scss";
 @import "form_sign_in";
 @import "ring";
+@import "show";
 
 
 // custom fonts
@@ -36,15 +37,12 @@ main{
 }
 
 
+
 a:hover {
   color: #9b620d;
 } 
  HEAD
 
-
-main {
-  margin-top: 400px;
-}
 /*
 body {
   margin-bottom: 400px;

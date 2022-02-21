@@ -1,26 +1,44 @@
 <body>
 
-<div>
+<main>
+
+<h1 class="char-name">Aragorn</h1>
+<div class="char-main"> 
+
+<div class="char-list-id">
+
+
 
 <% @aragornQuotes.each do |quote,index| %>
 
   <div id="<%= dom_id quote %>">
   <p>
-    <strong>Quote content:</strong>
+ 
     <%= quote.quote_content %>
   </p>
 
   <p>
-    <strong>Quote author:</strong>
+    <
     <%= quote.quote_author %>
-  </p>
+  </p> 
+  <br>
+  <br>
+  <br>
+  <%= link_to "Back", quotes_list_path %>
  
 </div>
 
  <% end %>
+ </div>
+ <div class= "char-portrait"> 
+ <img id="image" class="gandalfp-pic" src="<%= asset_path("gandalf2.png") %>" >
 
- <button class="go-back" >Full List</button>
 
- <%= link_to "Full List", quotes_list_path %>
+</div>
+
+
+
+ </main>
 
 </body>
+

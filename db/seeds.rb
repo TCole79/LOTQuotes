@@ -113,3 +113,63 @@ Quote.create(
   quote_author:'Gollum'
 )
 
+Quote.create(
+  quote_content:'"All we have to decide is what to do with the time that is given to us.",',
+  quote_author:'Gandalf'
+)
+
+
+Quote.create(
+  quote_content:'"Even the most subtle spiders may leave a weak thread."',
+  quote_author:'Gandalf'
+
+)
+Quote.create(
+  quote_content:'"A traitor may betray himself and do good that he does not intend."',
+  quote_author:'Gandalf'
+)
+
+Quote.create(
+  quote_content:'"One cannot be both tyrant and counselor."',
+  quote_author:'Gandalf'
+)
+
+Quote.create(
+  quote_content:'"Don\'t adventures ever have an end? I suppose not. Someone else always has to carry on the story.",',
+  quote_author:'Bilbo Baggins'
+)
+
+Quote.create(
+  quote_content:'“Victory after all, I suppose! Well, it seems a very gloomy business.”',
+  quote_author:'Bilbo Baggins'
+)
+
+Quote.create(
+  quote_content:'“I came from the end of bag, but no bag went over me. I am the friend of bears and the guest of eagles. I am Ring-winner and Luckwearer; and I am Barrel-rider.”',
+  quote_author:'Bilbo Baggins'
+)
+
+Quote.create(
+  quote_content:'"Bother burgling and everything to do with it! I wish I was at home in my nice hole by the fire, with the kettle just beginning to sing!”',
+  quote_author:'Bilbo Baggins'
+)
+
+Quote.create(
+  quote_content:'"I will be dead before I see the Ring in the hands of an Elf! Never trust an elf!"',
+  quote_author:'Gimli'
+
+)
+Quote.create(
+  quote_content:'"Stay close, young hobbits. They say a great sorceress lives in these woods, an elf witch of terrible power. All those who look upon her fall under her spell and are never seen again.",',
+  quote_author:'Gimli'
+)
+
+Quote.create(
+  quote_content:'“Deep is the abyss that is spanned by Durin\'s Bridge, and none has measured it,”',
+  quote_author:'Gimli'
+)
+
+Quote.create(
+  quote_content:'“Not a sound but the wind, There are no goblins near, or my ears are made of wood."',
+  quote_author:'Gimli'
+)

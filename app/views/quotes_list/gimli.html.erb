@@ -1,16 +1,44 @@
-<div class="center">
-  <h1>Create a Auote</h1>
-  <form>
-    <div class="inputbox">
-      <input type="text" required="required">
-      <span>Quote</span>
-    </div>
-    <div class="inputbox">
-      <input type="text" required="required">
-      <span>AUthor</span>
-    </div>
-    <div class="inputbox">
-      <input type="button" value="submit">
-    </div>
-  </form>
+<body>
+
+<main>
+
+<h1 class="char-name">Gimli</h1>
+<div class="char-main"> 
+
+<div class="char-list-id">
+
+
+
+<% @gimliQuotes.each do |quote,index| %>
+
+  <div id="<%= dom_id quote %>">
+  <p>
+ 
+    <%= quote.quote_content %>
+  </p>
+
+  <p>
+    <
+    <%= quote.quote_author %>
+  </p> 
+  <br>
+  <br>
+  <br>
+  <%= link_to "Back", quotes_list_path %>
+ 
 </div>
+
+ <% end %>
+ </div>
+ <div class= "char-portrait"> 
+ <img id="image" class="gandalfp-pic" src="<%= asset_path("gandalf2.png") %>" >
+
+
+</div>
+
+
+
+ </main>
+
+</body>
+
