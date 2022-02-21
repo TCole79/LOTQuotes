@@ -8,17 +8,6 @@
 
 <h1>What has Middle Earth been saying? </h1>
 
-<%= link_to 'https://twitter.com/MiddleE23501801', target: :_blank  do %>
-  <%= fa_icon "twitter" %> 
-<% end %>
-
-<%= link_to 'https://www.instagram.com/middleearth013/', target: :_blank do %>
-  <%= fa_icon "instagram" %> 
-<% end %>
-
-<%= link_to 'https://www.youtube.com/channel/UCkDiXNTFKK72VV267kFbdxA', target: :_blank do %>
-  <%= fa_icon "google" %> 
-<% end %>
 
 <div class="main-ring">
   <div class="container">
@@ -39,7 +28,28 @@
           <button type="button" class="fetch-specific-quote" >Fetch a Quote!</button>
       </form>
     </div>
-    <div class="top-right quoteByAuthor"> Top Right placeholder </div> 
+    <div class="top-right quoteByAuthor"> 
+    <!-- Button trigger modal -->
+          <button type="button" id="favoritesModal" class="btn btn-transparent"> <%=fa_icon "star" %> Favourites</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> 
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
     </div>

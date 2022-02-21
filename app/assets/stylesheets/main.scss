@@ -121,6 +121,7 @@ h2:hover {
   top: 8px;
   right: 16px;
   color: black;
+  font-family: Aniron;
 }
 /* Bottom right text */
 .bottom-right {
@@ -232,6 +233,9 @@ h2:hover {
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
 }
 .navbar-main {
+  padding-left: 10px;
+  padding-right: 10px;
+
   pointer-events: auto;
   //background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
