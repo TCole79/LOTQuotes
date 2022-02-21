@@ -33,33 +33,8 @@
         <% end %>
       </div>
     </div>
-  <li>
-    <%= link_to [:favorites] do %>
-      <%= fa_icon "star" %> Favorites
-    <% end %>
-  </li>
-  <li><%= link_to("Home", root_path)%></li>
-    <li><%= link_to 'About Us', [:about] %></li>
+  
 
-<!-- Button trigger modal -->
-<button type="button" id="favoritesModal" class="btn btn-primary"> Show Favourites</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -72,10 +47,7 @@
           <%= fa_icon "pencil" %> Create Quote
         <% end %>
             
-        <%= link_to [:quotes_list] do %>
-          <%= fa_icon "list" %> List Quotes
-        <% end %>
-
+        
         <%= link_to [:edit_list] do %>
           <%=fa_icon "pencil" %> Edit Quotes
           <% end %>
@@ -84,31 +56,27 @@
     </div> 
 
     
-      <div class="user-fav">
+    <div class="user-fav">
 
-        <% if Current.user %>
-        <p style="color:green">Logged in as: <b><%= Current.user.name %></b></p>
+      <% if Current.user %>
+      <p style="color:green">Logged in as: <b><%= Current.user.name %></b></p>
 
-        <%= link_to [:quotes_list] do %>
-          <%= fa_icon "list" %> List Quotes
-        <% end %>
+      <%= link_to [:quotes_list] do %>
+        <%= fa_icon "list" %> List Quotes
+      <% end %>
 
+    </div> 
+          
+    <div class="user-log">      
+          
+      <%= link_to "Sign Out", log_out_path, method: :get %>
+      
+      <% else %>
         
-          
-        <!-- Button trigger modal -->
-
-          
-      <div class="user-log">      
-          
-          <%= link_to "Sign Out", log_out_path, method: :get %>
-          
-          <% else %>
-            
-          <%= link_to "Sign up", sign_up_path %>
-          <%= link_to "Sign In", sign_in_path %>
-          <% end %>
-      </div>  
-    </div>
+      <%= link_to "Sign up", sign_up_path %>
+      <%= link_to "Sign In", sign_in_path %>
+      <% end %>
+    </div>  
 
   </section>
   
