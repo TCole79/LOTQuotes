@@ -40,3 +40,33 @@
     </div>
   </form>
 </div>
+
+
+
+
+<div class="list-quotes">
+
+<% @quotes.each do |quote,index| %>
+
+
+  <div id="<%= dom_id quote %>">
+<p>
+  <%= quote.quote_content %>
+</p>
+<p>
+  <%= quote.quote_author %>
+</p>
+
+</div>
+  
+  <p class= "show-this-quote"> 
+    <%= link_to "Edit Quote", quote %>
+   
+  </p>
+  <br>
+
+<% end %>
+</div>
+
+</main> 
+

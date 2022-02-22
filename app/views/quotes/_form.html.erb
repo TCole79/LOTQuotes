@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
+  <p class= "form-tile"> New Quote </p>
   <div>
-    <%= form.label :Quote, style: "display: block" %>
-    <%= form.text_field :quote_content %>
+    <%= form.label :Quote, style: "display: block", class: "subtitle-create" %>
+    <%= form.text_field :quote_content, class: "input-quote" %>
   </div>
-
+<br>
   <div>
-    <%= form.label :Author, style: "display: block" %>
-    <%= form.text_field :quote_author %>
+    <%= form.label :Author, style: "display: block" , class: "subtitle-create" %>
+    <%= form.text_field :quote_author, class: "input-quote" %>
   </div>
 
 <br>

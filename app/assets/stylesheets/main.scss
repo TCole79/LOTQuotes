@@ -9,6 +9,9 @@
 @import "form_sign_in";
 @import "ring";
 @import "show";
+@import "create";
+@import "char_id";
+@import "edit_quotes";
 
 
 // custom fonts
@@ -30,10 +33,17 @@
   font-family: "MiddleEath";
   src: url("MiddleEarth.ttf");
 }
+
+@font-face {
+  font-family: "MorrisRom";
+  src:url("MorrisRom")
+
+}
 main{
   margin-top: 120px;
   margin-left: 50px;
   margin-right:50px;
+  margin-bottom: 50px;
 }
 
 
@@ -43,15 +53,12 @@ a:hover {
 } 
  HEAD
 
-/*
-body {
-  margin-bottom: 400px;
-  background-color: #555;
-  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-  color: black;
 
+body {
+  background-image: url("background6.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-*/
 
 h1 {
   font-family: "Aniron";
@@ -145,7 +152,6 @@ h2:hover {
 }
 
 .create-form {
-  margin-top: 320px;
   display: flex;
   justify-content: center;
   position: absolute;
