@@ -1,46 +1,32 @@
 
 <main>
-<br>
-<br>
-<br>
-
-
-<div class="list-quotes">
-
 
 <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Quote</th>
-          <th>Author ID</th>
-          <th>Edit </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-       <% @quotes.each do |quote,index| %>
-  <div id="<%= dom_id quote %>">
-<p>
+<thead>
+  <tr class "column-name">
+    <th>Quote</th>
+    <th>Author</th>
+    <th>Edit</th>
+  </tr>
+</thead>
+<tbody>
+
+<% @quotes.each do |quote,index| %>
+
+<tr>
+  <td>
   <%= quote.quote_content %>
-</p>
-<p>
+  </td>
+  <td>
   <%= quote.quote_author %>
-</p>
-
-</div>
-  
-  <p class= "show-this-quote"> 
-    <%= link_to "Edit Quote", quote %>
-   
-  </p>
-  <b
-
-<% end %>
-</div>
-      </tbody>
-    </table>
+  </td>
+  <td class= "edit-button">
+  <%= link_to "Edit", quote %>
+  </td>
+<% end %>  
 
 
 
-</main> 
+
+
 

@@ -8,6 +8,10 @@
 @import "quote_list.scss";
 @import "form_sign_in";
 @import "ring";
+@import "show";
+@import "create";
+@import "char_id";
+@import "edit_quotes";
 
 
 // custom fonts
@@ -29,11 +33,19 @@
   font-family: "MiddleEath";
   src: url("MiddleEarth.ttf");
 }
+
+@font-face {
+  font-family: "MorrisRom";
+  src:url("MorrisRom")
+
+}
 main{
   margin-top: 120px;
   margin-left: 50px;
   margin-right:50px;
+  margin-bottom: 50px;
 }
+
 
 
 a:hover {
@@ -46,11 +58,15 @@ main {
   margin-top: 400px;
 }
 
-body {
+body.main-pages {
   
   background-image: url(background6.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+body.B-main { 
+  background-color: rgb(230, 221, 211);
 }
 
 
@@ -151,7 +167,6 @@ h2:hover {
 }
 
 .create-form {
-  margin-top: 320px;
   display: flex;
   justify-content: center;
   position: absolute;

@@ -1,0 +1,64 @@
+.quote-id{
+  margin-left:0;
+  margin-right:0;
+}
+
+.show-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.show-icons {
+  display:flex;
+  justify-content: space-between;
+  margin-left:35%;
+  margin-right:35%;
+}
+
+
+.show-quote {
+  font-family:"Aniron";
+  font-size: larger;
+  font-style: bold;
+}
+
+
+.delete-icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.edit-icon {
+  border: 1px solid rgba(253, 181, 12, 0.76);
+  border-spacing:10px; 
+  border-radius:5px;
+  padding: 5px;
+  color:rgba(253, 181, 12, 0.76);
+}
+
+.back-icon {
+  border:solid 1px rgb(58, 94, 5);  
+  padding: 5px;
+  border-radius:5px;
+  color: rgb(58, 94, 5)
+}
+.back-icon:hover {
+  background-color: rgb(58, 94, 5);
+  color:white;
+}
+
+.edit-icon:hover {
+  color: white;
+  background-color: rgba(253, 181, 12, 0.76);
+}
+
+.walk-pic {
+  filter:opacity(0.5);
+  width:100%;
+  bottom:0%;
+
+}
+
