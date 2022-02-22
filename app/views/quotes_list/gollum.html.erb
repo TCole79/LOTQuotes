@@ -3,37 +3,31 @@
 <main>
 
 <h1 class="char-name">Gollum</h1>
+
 <div class="char-main"> 
 
-<div class="char-list-id">
+  <div class="char-list-id">
 
+    <% @gollumQuotes.each do |quote,index| %>
 
-
-<% @gollumQuotes.each do |quote,index| %>
-
-  <div id="<%= dom_id quote %>">
-  <p>
- 
-    <%= quote.quote_content %>
-  </p>
-
+      <div id="<%= dom_id quote %>">
+        <p><%= quote.quote_content %></p>
+  
+      </div>
 
   <br>
   <br>
   <br>
  
- 
-</div>
-
  <% end %>
- </div>
+ <%= link_to "Back", quotes_list_path %>
+  </div>
+
  <div class= "char-portrait"> 
  <img id="image" class="gandalfp-pic" src="<%= asset_path("gandalf2.png") %>" >
-
-
 </div>
 
- <%= link_to "Back", quotes_list_path %>
+ 
 
  </main>
 

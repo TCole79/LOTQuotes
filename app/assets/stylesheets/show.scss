@@ -32,18 +32,23 @@
 
 
 .edit-icon {
-  border: 1px solid rgba(253, 181, 12, 0.76);
+  border: 2px solid rgb(245, 172, 3);
   border-spacing:10px; 
   border-radius:5px;
   padding: 5px;
-  color:rgba(253, 181, 12, 0.76);
+  color:rgb(185, 131, 3);
+  font-style: bold ;
+  background-color: rgb(238, 221, 182);
 }
 
 .back-icon {
-  border:solid 1px rgb(58, 94, 5);  
+  border:solid 2px rgb(58, 94, 5);  
   padding: 5px;
   border-radius:5px;
-  color: rgb(58, 94, 5)
+  color: rgb(58, 94, 5);
+  font-style: bold;
+  background-color:rgb(169, 182, 149) ;
+
 }
 .back-icon:hover {
   background-color: rgb(58, 94, 5);
@@ -52,13 +57,23 @@
 
 .edit-icon:hover {
   color: white;
-  background-color: rgba(253, 181, 12, 0.76);
+  background-color: rgb(245, 172, 3);
 }
 
 .walk-pic {
   filter:opacity(0.5);
   width:100%;
   bottom:0%;
-
 }
 
+.btn-outline-danger {
+  font-style: bold;
+  border:2px solid red;
+  background-color: rgb(240, 200, 200);
+}
+
+.create-notice {
+  display: flex;
+  justify-content: center;
+  color:green;
+}

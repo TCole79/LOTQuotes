@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get "/new_quote", to: "new_quote#index"
 
+  
+
 
   #routes for filtered routes 
 
@@ -36,6 +38,8 @@ Rails.application.routes.draw do
   get "edit_list", to: "edit_list#editlist"
 
   
+
+
   resources :users
 
   get "/sign_up", to: "registrations#new"

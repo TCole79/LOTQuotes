@@ -51,11 +51,10 @@ font-weight: 700;
 }
 
 .list-quotes {
-  font-family: "Aniron";
+  font-family: "MiddleEarth";
   text-align: center;
   font-style: italic;
-  filter: opacity(0.5);
-  font-size: medium;
+  font-size: large;
   font-weight: 900;
   
 }
@@ -70,6 +69,7 @@ font-weight: 700;
 .char-main {
   display: flex;
   justify-content: space-around;
+  font-family:"MorrisRom";
 }
 
 .char-list-id {

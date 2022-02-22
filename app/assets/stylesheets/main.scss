@@ -12,6 +12,7 @@
 @import "create";
 @import "char_id";
 @import "edit_quotes";
+@import "edit_table";
 
 
 // custom fonts
@@ -39,12 +40,13 @@
   src:url("MorrisRom")
 
 }
-main{
-  margin-top: 120px;
-  margin-left: 50px;
-  margin-right:50px;
-  margin-bottom: 50px;
-}
+
+  main{
+    margin-top: 120px;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom: 50px;
+  }
 
 
 
@@ -58,6 +60,7 @@ main {
   margin-top: 400px;
 }
 
+
 body.main-pages {
   
   background-image: url(background6.jpeg);
@@ -65,10 +68,13 @@ body.main-pages {
   background-size: cover;
 }
 
-body.B-main { 
+body.B-body { 
   background-color: rgb(230, 221, 211);
 }
 
+main.B-main {
+  margin-top: 120px;
+}
 
 h1 {
   font-family: "Aniron";
@@ -178,14 +184,7 @@ h2:hover {
   display: flex;
   justify-content: center;
 }
-/*
-.new-body {
-  background-image: url('background6.jpeg');
-  background-repeat: no-repeat;
-  object-fit: fill;
-  
-}
-*/
+
 
 /*--registration form css --*/
 .centered-register {
