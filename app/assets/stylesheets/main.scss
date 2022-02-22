@@ -177,9 +177,15 @@ h2 {
 /*--registration form css --*/
 .centered-register {
   position: absolute;
-  top: 53.5%;
-  left: 43.25%;
+  top: 34.7%;
+  left: 41.7%;
   pointer-events: auto;
+  background-color: transparent;
+  font-family: "Aniron";
+  padding: 30px;
+  color: goldenrod;
+  
+
 }
 
 
@@ -213,8 +219,7 @@ h2 {
   color: black;
   font-size: medium;
   font-weight: 200;
-  max-height: 75px;
-  min-height: 75px;
+ 
 
   .nav-left {
     align-items: flex-end;
