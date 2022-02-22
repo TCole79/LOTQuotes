@@ -5,11 +5,14 @@
   //flex-direction:  row;
   flex-wrap:       wrap;
   justify-content: space-around;
+  
 }
   .about-button {
     display:flex;
     justify-content: center;
     pointer-events: auto;
+    font-family: Aniron;
+    
   }
   .about-button:hover {  
     font-family:"Moria";

@@ -13,8 +13,8 @@
 // custom fonts
 
 @font-face {
-  font-family: "Aniron";
-  src: url("Aniron.ttf");
+  font-family: "Moria";
+  src: url("Moria.ttf");
 }
 @font-face {
   font-family: "Dwarvish";
@@ -45,50 +45,51 @@ a:hover {
 main {
   margin-top: 400px;
 }
-/*
-body {
-  margin-bottom: 400px;
-  background-color: #555;
-  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-  color: black;
 
+body {
+  
+  background-image: url(background6.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-*/
+
 
 h1 {
   font-family: "Aniron";
+  text-align: center;
+}
 
-}
-/*
 h1:hover {
-  font-family: "Moria";
+  font-family: "Dwarvish";
 }
-*/
+
 
 h2 {
   font-family: "Aniron";
   display: flex;
   justify-content: center;
 }
-/*
+
 h2:hover {
-  font-family: "Moria";
+  font-family: "Dwarvish";
 }
-*/
+
 
 
 .generate-button-div {
   display: flex;
   justify-content: center;
   position: relative;
-
+  justify-content: space-evenly;
   z-index: 2;
 }
+
 /*
 .generate-button-div:hover {  
-  font-family:"Moria",
+  font-family:"Dwarvish"
 }
 */
+
 // custom class for the spinning ring
 .main-ring {
   display: flex;
@@ -107,7 +108,7 @@ h2:hover {
   position: absolute;
   bottom: 8px;
   left: 16px;
-  color: black;
+  color: whitesmoke;
 }
 /* Top left text */
 .top-left {
@@ -116,13 +117,14 @@ h2:hover {
   left: 16px;
   color: black;
   pointer-events: auto;
+  font-family: Aniron;
 }
 /* Top right text */
 .top-right {
   position: absolute;
   top: 8px;
   right: 16px;
-  color: black;
+  color: whitesmoke;
   font-family: Aniron;
 }
 /* Bottom right text */
@@ -132,7 +134,9 @@ h2:hover {
   position: absolute;
   bottom: 8px;
   right: 16px;
-  color: rgb(245, 184, 30);
+  color: whitesmoke;
+  
+
   
 }
 /* Centered text */
@@ -141,7 +145,7 @@ h2:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: gold;
   pointer-events: auto;
   font-family: "Aniron";
 }
@@ -233,7 +237,13 @@ h2:hover {
 .navbar {
   background-color:moccasin;
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  position: sticky; /* Set the navbar to sticky position so it scrolls and does not cover underlying nav content */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 99999;
 }
+
+
 .navbar-main {
   padding-left: 10px;
   padding-right: 10px;
