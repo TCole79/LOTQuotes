@@ -52,7 +52,6 @@ a {
     color: #9b620d;
   }
 
-<<<<<<< HEAD
 HEAD main {
   margin-top: 400px;
 }
@@ -67,6 +66,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body.B-main { 
+  background-color: rgb(230, 221, 211);
+}
 
 h1 {
   font-family: "Aniron";
@@ -76,40 +78,6 @@ h1 {
   // h1:hover {
   //   font-family: "Moria";
   // }
-=======
-
-a:hover {
-  color: #9b620d;
-} 
- HEAD
-
-
-main {
-  margin-top: 400px;
-}
-
-body.main-pages {
-  
-  background-image: url(background6.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-body.B-main { 
-  background-color: rgb(230, 221, 211);
-}
-
-
-h1 {
-  font-family: "Aniron";
-  text-align: center;
-}
-
-h1:hover {
-  font-family: "Dwarvish";
-}
-
->>>>>>> 7d61def2bd3bc77513ac37c6e1bdfe45e6951c78
 
 h2 {
   font-family: "Aniron";
