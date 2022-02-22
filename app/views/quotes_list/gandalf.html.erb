@@ -1,9 +1,16 @@
-<body>
+<body class= "B-main">
 
 <main>
 
 <h1 class="char-name">Gandalf</h1>
+
+<%= link_to "Back", quotes_list_path %>
+
 <div class="char-main"> 
+
+
+
+
 
 <div class="char-list-id">
 
@@ -17,14 +24,11 @@
     <%= quote.quote_content %>
   </p>
 
-  <p>
-    <
-    <%= quote.quote_author %>
-  </p> 
+
   <br>
   <br>
   <br>
-  <%= link_to "Back", quotes_list_path %>
+  
  
 </div>
 

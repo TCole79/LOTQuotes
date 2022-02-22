@@ -1,15 +1,32 @@
-<main>
+<main class="quote-id">
 
 <p style="color: green"><%= notice %></p>
 
-<%= render @quote %>
 
-<div>
 
-  <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
-  <%= link_to "Back to quotes", quotes_list_path %>
+<div class = "show-page">
+  <div class="show-quote"
+      <%= render @quote %>
+  </div>
+  <br>
+  
+ 
+  <div class = "show-icons"> 
 
-  <%= button_to "Destroy this quote ", @quote, method: :delete %>
+  <%= link_to "Edit Quote", edit_quote_path(@quote), class: "edit-icon" %> 
+
+   <%= button_to "Delete Quote ", @quote, class: "btn btn-outline-danger", method: :delete %>
+  <%= link_to "Back to Quotes", quotes_list_path, class: "back-icon" %>
+  </div>
+  
+  </div>
 </div>
+
+
+<br>
+<br>
+<br>
+<%= image_tag "walk2.png", class: "walk-pic" %>
+
 
 </main> 

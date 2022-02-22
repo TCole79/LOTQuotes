@@ -12,6 +12,9 @@
     justify-content: center;
     //font-family:"Moria";
     z-index: 99999;
+    pointer-events: auto;
+    font-family: Aniron;
+    
   }
   .about-button:hover {  
     font-family: "Aniron";
@@ -28,4 +31,3 @@
     from {opacity: 0;}
     to {opacity:1 ;}
   }
-

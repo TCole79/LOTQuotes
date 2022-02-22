@@ -10,11 +10,15 @@
 @import "ring";
 @import "toast";
 @import "modal";
+@import "show";
+@import "create";
+@import "char_id";
+@import "edit_quotes";
 
 //// custom LOTR fonts ////
 @font-face {
-  font-family: "Aniron";
-  src: url("Aniron.ttf");
+  font-family: "Moria";
+  src: url("Moria.ttf");
 }
 @font-face {
   font-family: "Dwarvish";
@@ -28,12 +32,17 @@
   font-family: "MiddleEath";
   src: url("MiddleEarth.ttf");
 }
+@font-face {
+  font-family: "MorrisRom";
+  src:url("MorrisRom")
+}
 //// custom fonts end ////
 
-main {
+main{
   margin-top: 120px;
   margin-left: 50px;
-  margin-right: 50px;
+  margin-right:50px;
+  margin-bottom: 50px;
 }
 
 a {
@@ -43,6 +52,7 @@ a {
     color: #9b620d;
   }
 
+<<<<<<< HEAD
 HEAD main {
   margin-top: 400px;
 }
@@ -66,6 +76,40 @@ h1 {
   // h1:hover {
   //   font-family: "Moria";
   // }
+=======
+
+a:hover {
+  color: #9b620d;
+} 
+ HEAD
+
+
+main {
+  margin-top: 400px;
+}
+
+body.main-pages {
+  
+  background-image: url(background6.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.B-main { 
+  background-color: rgb(230, 221, 211);
+}
+
+
+h1 {
+  font-family: "Aniron";
+  text-align: center;
+}
+
+h1:hover {
+  font-family: "Dwarvish";
+}
+
+>>>>>>> 7d61def2bd3bc77513ac37c6e1bdfe45e6951c78
 
 h2 {
   font-family: "Aniron";
@@ -86,8 +130,10 @@ h2 {
   display: flex;
   justify-content: center;
   position: relative;
+  justify-content: space-evenly;
   z-index: 2;
 }
+
 /*
 .generate-button-div:hover {  
   font-family:"Moria",
@@ -104,7 +150,7 @@ h2 {
   position: absolute;
   bottom: 8px;
   left: 16px;
-  color: black;
+  color: whitesmoke;
 }
 /* Top left text */
 .top-left {
@@ -120,8 +166,7 @@ h2 {
   position: absolute;
   top: 8px;
   right: 16px;
-  color: black;
-  //color: #f5d133;
+  color: whitesmoke;
   font-family: Aniron;
 }
 /* Bottom right text */
@@ -130,9 +175,7 @@ h2 {
   position: absolute;
   bottom: 8px;
   right: 16px;
-  //color: rgb(245, 184, 30);
-  //color: #f5d133;
-
+  color: whitesmoke;
 }
 /* Centered text */
 .centered {
@@ -140,13 +183,12 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: gold;
   pointer-events: auto;
   font-family: "Aniron";
 }
 
 .create-form {
-  margin-top: 320px;
   display: flex;
   justify-content: center;
   position: absolute;

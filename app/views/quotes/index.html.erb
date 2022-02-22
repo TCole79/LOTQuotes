@@ -3,13 +3,15 @@
 <%= javascript_include_tag('dropdown.js') %>
 <%= javascript_include_tag('modal.js') %>
 
+<body class= "main-pages">
 
 <p style="color: green"><%= notice %></p>
 
 <h1>The Lord of the Quotes</h1>
+<br>
+<br>
 
-<h2>What has Middle Earth been saying? </h2>
-
+<h1>What has Middle Earth been saying? </h1>
 
 <div class="main-ring">
   <div class="container">
@@ -26,7 +28,7 @@
           <option value="Faramir">Faramir</option>
           <option value="Gandalf">Gandalf</option>
         </select>
-          <button type="button" class="fetch-specific-quote" >Fetch a Quote!</button>
+          <button type="button" class="fetch-specific-quote" style="color:black; background-color:transparent; border: none" >Fetch a Quote!</button>
       </form>
     </div>
     <div class="top-right quoteByAuthor"> 
@@ -54,10 +56,10 @@
     </div>
     <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
     <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
-      <div class="generate-button-div"> 
-      <button class="generate-button"> Random Quote! </button>
-      <a href="#" data-quote-id=<%= @tolkien['id'] %> class="favorite"> Favorite </a>
-      <a href="#" class="unFavorite"> Un Favorite </a>
+      <div class="generate-button-div" > 
+      <button class="generate-button" style="color:gold; background-color:transparent; border:none"> Random Quote! </button>
+      <a href="#" data-quote-id=<%= @tolkien['id'] %> class="favorite" style="color:gold"><%=fa_icon "star" %> Favorite </a>
+      <a href="#" class="unFavorite" style="color:white"> Un Favorite </a>
       </div>
     </div>
   </div> 

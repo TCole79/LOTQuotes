@@ -1,5 +1,7 @@
 <%= javascript_include_tag('clipboard.js') %>
 
+<body class= "main-pages">
+
 <h1>What's this all about?</h1>
 
 <%# <%= image_tag("ring.png", width: '400px') %>
@@ -12,9 +14,9 @@
 <div class="main-ring">
   <div class="container">
   <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
-    <div class="bottom-left">Bottom Left placeholder</div>
-    <div class="top-left">Top Left placeholder</div>
-    <div class="top-right">Top Right placeholder</div>
+    <div class="bottom-left"></div>
+    <div class="top-left"></div>
+    <div class="top-right"></div>
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong><br>
       <%= @weather_output['weather'][0]['description'].titlecase %> <br> <%= @weather_output['main']['temp'] %> &#8451
     </div>
@@ -25,7 +27,8 @@
 </div>
 <br>
 <br>
-<div class="about-button"> <%= link_to "Main Page", root_path, class: 'btn btn-lg btn-primary' %></div>
+<%# <div class="about-button"> <%= link_to "Main Page", root_path, class: 'btn btn-lg btn-primary'</div> %>
+<div class="about-button" style="color:white" > <%= link_to "Return to Main", root_path, class: 'btn btn-lg btn-transparent' %></div>
 <!-- Toast start -->
 <div class="toast" id="toasty" style="position: absolute; top: 50%; right: 50%; transform: translateX(50%);" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header" style="color: #9b620d;">
