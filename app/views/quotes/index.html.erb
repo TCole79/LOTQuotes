@@ -1,6 +1,8 @@
 <%= javascript_include_tag('clipboard.js') %>
 <%= javascript_include_tag('tolkien_api.js') %>
 <%= javascript_include_tag('dropdown.js') %>
+<%= javascript_include_tag('modal.js') %>
+
 
 <p style="color: green"><%= notice %></p>
 
@@ -18,7 +20,6 @@
         <select>
           <option disabled hidden selected>Select</option>
           <option value="Aragorn">Aragorn</option>
-          <option value="Bilbo">Bilbo</option> 
           <option value="Boromir">Boromir</option>
           <option value="Celeborn">Celeborn</option>
           <option value="Elrond">Elrond</option>
@@ -30,26 +31,24 @@
     </div>
     <div class="top-right quoteByAuthor"> 
     <!-- Button trigger modal -->
-          <button type="button" id="favoritesModal" class="btn btn-transparent"> <%=fa_icon "star" %> Favourites</button>
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+      <button type="button" id="favoritesModal" class="btn btn-transparent"> <%=fa_icon "star" %> Favourites</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
-    </div> 
+      </div>
+      <!-- Modal end -->
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
     </div>
@@ -64,19 +63,31 @@
   </div> 
 </div>
 <br>
-
+<!-- Ticker start -->
 <div class="container">
   <div class="ticker">
     <div class="title"><h5>Breaking ME News</h5></div>
       <div class="news">
         <marquee>
           <p>
-          Results now coming in from the Mordor general election, Sauron reported to have 98.5% of the votes /// Entwives reportedly sighted on the west bank of a southern bow of the river Carnen, flowing into the Sea of Rhûn /// Hobbit's take Gold Medal in Curling at Middle Earth Winter Olympics, coach attributes success to, "being low to the ground" /// Exclusive interview with the Balrog tonight at 9pm, "I'm just misunderstood." /// Minas Tirith FC win the Champion's League final 3-2 against Isengard /// The Rohan Derby mired in controversy after Elvish team ~ Valaya's Breath ~ accused of using magic to win /// The Epic Dwarven Brewery Tour now open for tickets, get yours online now /// Farmers in the Westfold grow a 2708lb pumpkin, beating the famed Farmer Maggot's Guinness Book of ME Records entry of 3025 /// Goblin factory workers unionize, spokesman releases statement, "Nah dis is fair, innit." /// The Nazghul Nine Ballet House announce Middle Earth tour ~ tickets sell out immediately /// Weathertop Restoration Fund reaches it's crowdfunding target after mysterious benefactor donates a set of mithril armour /// Cave Troll sanctuary in the Misty Mountains set to open summer this year /// The final Palantir recovered in a garage sale in Dale, owner say's, "We used it as a paperweight for years." /// Prancing Pony celebrates its 50th year of operation with a limited run of themed beer steins - more details to follow /// 
+          Sauron wins Mordor general election with 98.5% of the votes  ///  Hobbit's win Curling Gold Medal at ME Winter Olympics, coach attributes success to "being low to the ground."  ///  Exclusive interview with the Balrog tonight at 9pm, "I'm just misunderstood."  ///  Minas Tirith FC win the Champion's League final 3-2 against Isengard  ///  Rohan Derby mired in controversy after Elvish team, Valaya's Breath, accused of using magic  ///  The Epic Dwarven Brewery Tour will include Khazad-dûm for first time since 2993  ///  Farmers in the Westfold grow a 2708lb pumpkin, beating the famed Farmer Maggot's Guinness Book of ME Records entry of 3025  ///  Goblin factory workers unionize, spokesman releases statement, "Nah dis is fair, innit."  ///  The Nazghul Nine Ballet House announce Middle Earth tour ~ tickets sell out immediately  ///  Weathertop Restoration Fund reaches it's crowdfunding target after mysterious benefactor donates a set of mithril armour  ///  Cave Troll sanctuary in the Misty Mountains set to open summer this year  ///  Final Palantir recovered in a garage sale in Dale, owner say's "We used it as a paperweight for years."  ///  Prancing Pony celebrates its 50th year of operation with a limited run of themed beer steins  ///  Entwives reportedly sighted on the west bank of a southern bow of the river Carnen, flowing into the Sea of Rhûn
           </p>
         </marquee>
       </div>
     </div>
     <br>
+  </div>
+</div>
+    <!-- Ticker end -->
+
+<!-- Toast start -->
+<div class="toast" id="toasty" style="position: absolute; top: 50%; right: 50%; transform: translateX(50%);" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header" style="color: #9b620d;">
+    <strong class="mr-auto">Copied to clipboard!</strong>
+  </div>
+  <div class="toast-body"></div>
+</div>
+<!-- Toast end -->
+
 </body>
 
-<%# <%= @tolkien_character["text"] ~ <%= @tolkien_character["character"] %>

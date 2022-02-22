@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-//@import "dropdown_buttons";
+@import "dropdown_buttons";
 @import "about_page";
 @import "ticker";
 @import "clipboard_buttons";
@@ -8,10 +8,10 @@
 @import "quote_list.scss";
 @import "form_sign_in";
 @import "ring";
+@import "toast";
+@import "modal";
 
-
-// custom fonts
-
+//// custom LOTR fonts ////
 @font-face {
   font-family: "Aniron";
   src: url("Aniron.ttf");
@@ -24,77 +24,74 @@
   font-family: "Aniron";
   src: url("Aniron.ttf");
 }
-
 @font-face {
   font-family: "MiddleEath";
   src: url("MiddleEarth.ttf");
 }
-main{
-  margin-top: 120px;
-  margin-left: 50px;
-  margin-right:50px;
-}
-
-
-a:hover {
-  color: #9b620d;
-} 
- HEAD
-
+//// custom fonts end ////
 
 main {
+  margin-top: 120px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+a {
+  color: black;
+}
+  a:hover {
+    color: #9b620d;
+  }
+
+HEAD main {
   margin-top: 400px;
 }
-/*
-body {
-  margin-bottom: 400px;
-  background-color: #555;
-  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-  color: black;
 
+body {
+  margin-bottom: 100px;
+  // height: 100vh;
+  // width:100vw;
+  //overflow-y: hidden;
+  // background-color: #555;
+  background-image: url("background6.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-*/
 
 h1 {
   font-family: "Aniron";
-
+  display: flex;
+  justify-content: center;
 }
-/*
-h1:hover {
-  font-family: "Moria";
-}
-*/
+  // h1:hover {
+  //   font-family: "Moria";
+  // }
 
 h2 {
   font-family: "Aniron";
   display: flex;
   justify-content: center;
 }
-/*
-h2:hover {
-  font-family: "Moria";
+  h2:hover {
+    font-family: "Moria";
+  }
+
+.quote {
+  color: #f5d133;
 }
-*/
-
-
+// #favoritesModal {
+//   color: #f5d133;
+// }
 .generate-button-div {
   display: flex;
   justify-content: center;
   position: relative;
-
   z-index: 2;
 }
 /*
 .generate-button-div:hover {  
   font-family:"Moria",
-}
-*/
-// custom class for the spinning ring
-.main-ring {
-  display: flex;
-  justify-content: center;
-  //pointer-events: none;
-}
+} */
 
 //// Container holding the About image and the text ////
 .container {
@@ -116,6 +113,7 @@ h2:hover {
   left: 16px;
   color: black;
   pointer-events: auto;
+  font-family: Aniron;
 }
 /* Top right text */
 .top-right {
@@ -123,17 +121,18 @@ h2:hover {
   top: 8px;
   right: 16px;
   color: black;
+  //color: #f5d133;
   font-family: Aniron;
 }
 /* Bottom right text */
 .bottom-right {
- 
   font-family: Aniron;
   position: absolute;
   bottom: 8px;
   right: 16px;
-  color: rgb(245, 184, 30);
-  
+  //color: rgb(245, 184, 30);
+  //color: #f5d133;
+
 }
 /* Centered text */
 .centered {
@@ -152,7 +151,6 @@ h2:hover {
   justify-content: center;
   position: absolute;
   z-index: 3;
- 
 }
 
 .main-ring2 {
@@ -164,9 +162,7 @@ h2:hover {
   background-image: url('background6.jpeg');
   background-repeat: no-repeat;
   object-fit: fill;
-  
-}
-*/
+} */
 
 /*--registration form css --*/
 .centered-register {
@@ -176,117 +172,68 @@ h2:hover {
   pointer-events: auto;
 }
 
-//// custom button code for clipboard copy/paste function ////
-.btn-clipboard {
-  position: relative;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 10;
-  display: block;
-  padding: 0.25rem 0.5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0.25rem;
-}
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7;
-}
-// custom tooltip css for clipboard copy/paste function - NOT FINISHED
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+
 .navbar {
-  background-color:moccasin;
-  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  background-color: white;
+  //background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  //background-image: url("fellowship-5638589_1920.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size:contain;
+  overflow: hidden;
+  //background-color: #333;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 99999;
 }
+
 .navbar-main {
   padding-left: 10px;
   padding-right: 10px;
-
   pointer-events: auto;
   //background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  
-  display: flex;  
+  display: flex;
   align-items: flex-end;
-  justify-content:space-between;
-  
+  justify-content: space-between;
   font-family: "Aniron";
-  color:black;
+  color: black;
   font-size: medium;
   font-weight: 200;
   max-height: 75px;
   min-height: 75px;
-  
 
   .nav-left {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;  
+    justify-content: space-between;
   }
 
   .nav-user {
-    align-items:flex-end;
+    align-items: flex-end;
     text-align: center;
-    justify-content:space-between;    
+    justify-content: space-between;
   }
 
   .nav-admin {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 
   .user-fav {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 }
 
-
-
-
 .char-list {
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .char-box {
@@ -295,31 +242,25 @@ h2:hover {
 }
 
 .char-pic {
-  width:160px;
+  width: 160px;
   z-index: 1;
 }
 
-
 .char-pic:hover {
-  filter:opacity(0.7);
+  filter: opacity(0.7);
   //filter:hue-rotate(30deg);
-  
-    .nav-left {
-      align-items: flex-end;
-    }
-  
-    .nav-user {
-      align-items:flex-end;
-      text-align: right;    
-    }
-  
-    .nav-admin {
-      align-items: flex-end;
-      text-align: center;
-    }
+
+  .nav-left {
+    align-items: flex-end;
   }
 
+  .nav-user {
+    align-items: flex-end;
+    text-align: right;
+  }
 
-
-
-
+  .nav-admin {
+    align-items: flex-end;
+    text-align: center;
+  }
+}

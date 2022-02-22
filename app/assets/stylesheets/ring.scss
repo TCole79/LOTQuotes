@@ -1,3 +1,9 @@
+.main-ring {
+  display: flex;
+  justify-content: center;
+  //pointer-events: none;
+}
+
 .rotate {
   width: 800px;
   filter: hue-rotate(0deg);
@@ -36,7 +42,6 @@
 .rotate2:hover {
   filter: hue-rotate(1070deg);
   transition: filter 30s ease-in-out;
-
 }
 
 @keyframes rotation {

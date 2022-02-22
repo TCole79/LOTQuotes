@@ -5,14 +5,16 @@
   //flex-direction:  row;
   flex-wrap:       wrap;
   justify-content: space-around;
+  text-align: center;
 }
   .about-button {
     display:flex;
     justify-content: center;
-    pointer-events: auto;
+    //font-family:"Moria";
+    z-index: 99999;
   }
   .about-button:hover {  
-    font-family:"Moria";
+    font-family: "Aniron";
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     pointer-events: auto;

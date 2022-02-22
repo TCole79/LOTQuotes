@@ -21,6 +21,18 @@ a {
   width: 80%;
   height: 60px;
   margin: 0 auto;
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-6px) rotate(45deg);
+    background-color: yellow;
+    top: 50%;
+    left: 138px;
+    z-index: 2;
+  }
 }
 .news {
   display: flex;
@@ -29,22 +41,27 @@ a {
   width: 76%;
   background: #cc4444;
   padding: 0 2%;
+  z-index: 1; // this goes underneath the arrow
+  p {
+    margin: 0 !important;
+  }
 }
 .title {
   width: 20%;
   text-align: center;
   background: #c81c1c;
   position: relative;
+  z-index: 3; // this goes over .arrow
 }
 .title:after {
   position: absolute;
-  content: "";
-  right: -19%;
-  border-left: 20px solid #c81c1c;
-  border-top: 33px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 33px solid transparent;
-  top: 0;
+  // content: "";
+  // right: -19%;
+  // border-left: 20px solid #c81c1c;
+  // border-top: 33px solid transparent;
+  // border-right: 20px solid transparent;
+  // border-bottom: 33px solid transparent;
+  // top: 0;
 }
 .title h5 {
   font-size: 18px;
