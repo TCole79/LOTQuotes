@@ -11,7 +11,13 @@ $(document).ready(function (e) {
 
     favoriteQuotes.map((quote) => {
       if (Object.keys(quote).length > 0) {
-        return (content += `<li>"${quote.text}" ~ ${quote.character} <button class=btn-clipboard-modal value="${quote.text + quote.character}"> Copy </button> <button class=btn-clipboard-modal-delete value=${quote.id}> Delete </button> </li>`);
+        return (content += `<li>"${quote.text}" ~ ${
+          quote.character
+        } <button class=btn-clipboard-modal value="${
+          quote.text + quote.character
+        }"> Copy </button> <button class=btn-clipboard-modal-delete value=${
+          quote.id
+        }> Delete </button> </li>`);
       }
     });
 
@@ -40,7 +46,11 @@ $(document).ready(function (e) {
       console.log("val test", copyID);
       navigator.clipboard.writeText(copyID).then(() => {
         // Alert the user that the action took place.
-        alert("Copied to clipboard");
+        //alert("Copied to clipboard");
+        $("#toasty").toast("show");
+        setTimeout(() => {
+          $("#toasty").toast("hide");
+        }, 3000);
       });
     });
   });

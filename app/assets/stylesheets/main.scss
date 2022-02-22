@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-//@import "dropdown_buttons";
+@import "dropdown_buttons";
 @import "about_page";
 @import "ticker";
 @import "clipboard_buttons";
@@ -8,15 +8,15 @@
 @import "quote_list.scss";
 @import "form_sign_in";
 @import "ring";
+@import "toast";
+@import "modal";
 @import "show";
 @import "create";
 @import "char_id";
 @import "edit_quotes";
 @import "edit_table";
 
-
-// custom fonts
-
+//// custom LOTR fonts ////
 @font-face {
   font-family: "Moria";
   src: url("Moria.ttf");
@@ -29,34 +29,31 @@
   font-family: "Aniron";
   src: url("Aniron.ttf");
 }
-
 @font-face {
   font-family: "MiddleEath";
   src: url("MiddleEarth.ttf");
 }
-
 @font-face {
   font-family: "MorrisRom";
   src:url("MorrisRom")
+}
+//// custom fonts end ////
 
+main{
+  margin-top: 120px;
+  margin-left: 50px;
+  margin-right:50px;
+  margin-bottom: 50px;
 }
 
-  main{
-    margin-top: 120px;
-    margin-left: 50px;
-    margin-right:50px;
-    margin-bottom: 50px;
+a {
+  color: black;
+}
+  a:hover {
+    color: #9b620d;
   }
 
-
-
-a:hover {
-  color: #9b620d;
-} 
- HEAD
-
-
-main {
+HEAD main {
   margin-top: 400px;
 }
 
@@ -76,28 +73,34 @@ main.B-main {
   margin-top: 120px;
 }
 
+body.B-main { 
+  background-color: rgb(230, 221, 211);
+}
+
 h1 {
   font-family: "Aniron";
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-
-h1:hover {
-  font-family: "Dwarvish";
-}
-
+  // h1:hover {
+  //   font-family: "Moria";
+  // }
 
 h2 {
   font-family: "Aniron";
   display: flex;
   justify-content: center;
 }
+  h2:hover {
+    font-family: "Moria";
+  }
 
-h2:hover {
-  font-family: "Dwarvish";
+.quote {
+  color: #f5d133;
 }
-
-
-
+// #favoritesModal {
+//   color: #f5d133;
+// }
 .generate-button-div {
   display: flex;
   justify-content: center;
@@ -108,16 +111,8 @@ h2:hover {
 
 /*
 .generate-button-div:hover {  
-  font-family:"Dwarvish"
-}
-*/
-
-// custom class for the spinning ring
-.main-ring {
-  display: flex;
-  justify-content: center;
-  //pointer-events: none;
-}
+  font-family:"Moria",
+} */
 
 //// Container holding the About image and the text ////
 .container {
@@ -151,15 +146,11 @@ h2:hover {
 }
 /* Bottom right text */
 .bottom-right {
- 
   font-family: Aniron;
   position: absolute;
   bottom: 8px;
   right: 16px;
   color: whitesmoke;
-  
-
-  
 }
 /* Centered text */
 .centered {
@@ -177,7 +168,6 @@ h2:hover {
   justify-content: center;
   position: absolute;
   z-index: 3;
- 
 }
 
 .main-ring2 {
@@ -185,132 +175,81 @@ h2:hover {
   justify-content: center;
 }
 
-
 /*--registration form css --*/
 .centered-register {
   position: absolute;
-  top: 53.5%;
-  left: 43.25%;
+  top: 34.7%;
+  left: 41.7%;
   pointer-events: auto;
+  background-color: transparent;
+  font-family: "Aniron";
+  padding: 30px;
+  color: goldenrod;
+  
+
 }
 
-//// custom button code for clipboard copy/paste function ////
-.btn-clipboard {
-  position: relative;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 10;
-  display: block;
-  padding: 0.25rem 0.5rem;
-  font-size: 75%;
-  color: #818a91;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0.25rem;
-}
-.btn-clipboard:hover {
-  color: #fff;
-  background-color: #027de7;
-}
-// custom tooltip css for clipboard copy/paste function - NOT FINISHED
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+
 .navbar {
-  background-color:moccasin;
-  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-  position: sticky; /* Set the navbar to sticky position so it scrolls and does not cover underlying nav content */
+  background-color: white;
+  //background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  //background-image: url("fellowship-5638589_1920.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size:contain;
+  overflow: hidden;
+  //background-color: #333;
+  position: sticky; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   z-index: 99999;
 }
 
-
 .navbar-main {
   padding-left: 10px;
   padding-right: 10px;
-
   pointer-events: auto;
   //background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  
-  display: flex;  
+  display: flex;
   align-items: flex-end;
-  justify-content:space-between;
-  
+  justify-content: space-between;
   font-family: "Aniron";
-  color:black;
+  color: black;
   font-size: medium;
   font-weight: 200;
-  max-height: 75px;
-  min-height: 75px;
-  
+ 
 
   .nav-left {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;  
+    justify-content: space-between;
   }
 
   .nav-user {
-    align-items:flex-end;
+    align-items: flex-end;
     text-align: center;
-    justify-content:space-between;    
+    justify-content: space-between;
   }
 
   .nav-admin {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 
   .user-fav {
     align-items: flex-end;
     text-align: center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 }
 
-
-
-
 .char-list {
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .char-box {
@@ -319,31 +258,25 @@ h2:hover {
 }
 
 .char-pic {
-  width:160px;
+  width: 160px;
   z-index: 1;
 }
 
-
 .char-pic:hover {
-  filter:opacity(0.7);
+  filter: opacity(0.7);
   //filter:hue-rotate(30deg);
-  
-    .nav-left {
-      align-items: flex-end;
-    }
-  
-    .nav-user {
-      align-items:flex-end;
-      text-align: right;    
-    }
-  
-    .nav-admin {
-      align-items: flex-end;
-      text-align: center;
-    }
+
+  .nav-left {
+    align-items: flex-end;
   }
 
+  .nav-user {
+    align-items: flex-end;
+    text-align: right;
+  }
 
-
-
-
+  .nav-admin {
+    align-items: flex-end;
+    text-align: center;
+  }
+}
