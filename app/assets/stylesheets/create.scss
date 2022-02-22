@@ -8,7 +8,7 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;  
   border:1px solid black;
   padding: 50px;
-  transform: translateY(-35%);
+  transform: translateY(-18%);
   top:50%;
   position: absolute;
   z-index: 3;
@@ -45,6 +45,8 @@ font-size: large;
 .create-form input[type="submit"] {
 border-radius: 5px;
 background-color: white;  
+font-family: "MorrisRom";
+font-size:larger;
 
 }
 
@@ -54,4 +56,11 @@ background-color: white;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(255, 217, 0, 0.966), 0 0 10px rgba(255, 238, 0, 0.966), 0 0 15px rgba(255, 230, 0, 0.973), 0 2px 0 rgba(230, 207, 8, 0.979);
   border: 2px solid goldenrod;
+}
+
+.see-quotes {
+  display: flex;
+  justify-content: center;
+  font-family: "Aniron";
+  font-size: larger;
 }

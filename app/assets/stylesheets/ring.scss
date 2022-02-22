@@ -39,6 +39,16 @@
   z-index: 3;
 }
 
+.rotate7 {
+  margin-top:50px;
+  width: 700px;
+  filter: hue-rotate(359deg);
+  filter:brightness(100%);
+  transition: filter 30s ease-in-out;
+  animation: rotation 120s infinite linear;
+  z-index: 1;
+}
+
 .rotate2:hover {
   filter: hue-rotate(1070deg);
   transition: filter 30s ease-in-out;

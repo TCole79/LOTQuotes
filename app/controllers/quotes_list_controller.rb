@@ -39,4 +39,5 @@ end
 def gollum 
   @gollumQuotes = Quote.where(quote_author: "Gollum")
 end
+
 end
