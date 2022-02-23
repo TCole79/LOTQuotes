@@ -17,7 +17,11 @@
 <div class="main-ring">
   <div class="container">
   <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
-    <div class="bottom-left"> Bottom Left placeholder </div>
+    <div class="bottom-left"> <b>Great Travel Deal!!!</b><br>
+      <%= link_to'https://www.hobbitontours.com/', target: :_blank  do %>
+        <p> See Hobbiton!! </p>
+      <% end %>
+    </div>
     <div class="top-left"> Choose quotes by character:
       <form>
         <select>
@@ -54,6 +58,8 @@
       <!-- Modal end -->
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
+      <br>
+      <a id="weather" href="https://www.theweathernetwork.com/us/weather/maryland/middle-earth" target="_blank">See details</a>
     </div>
     <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
     <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
