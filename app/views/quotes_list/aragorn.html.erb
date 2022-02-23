@@ -1,41 +1,36 @@
-<body class= "B-main">
+<body class= "B-body">
 
-<main>
+<main class= "B-main">
 
 <h1 class="char-name">Aragorn</h1>
+
 <div class="char-main"> 
 
-<div class="char-list-id">
+  <div class="char-list-id">
 
+    <% @aragornQuotes.each do |quote,index| %>
 
-
-<% @aragornQuotes.each do |quote,index| %>
-
-  <div id="<%= dom_id quote %>">
-  <p>
- 
-    <%= quote.quote_content %>
-  </p>
+      <div id="<%= dom_id quote %>">
+        <p><%= quote.quote_content %></p>
+  
+      </div>
 
 
   <br>
   <br>
-  <br>
  
- 
-</div>
-
  <% end %>
- </div>
+ <%= link_to "Back", quotes_list_path, class: "back-tick" %>
+  </div>
+
  <div class= "char-portrait"> 
- <img id="image" class="gandalfp-pic" src="<%= asset_path("gandalf2.png") %>" >
-
-
+ <img id="image" class="aragorn-pic" src="<%= asset_path("aragorn4.png") %>" >
 </div>
 
- <%= link_to "Back", quotes_list_path %>
+ 
 
  </main>
 
 </body>
+
 
