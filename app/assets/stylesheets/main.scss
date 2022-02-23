@@ -50,7 +50,7 @@ a {
   color: black;
 }
   a:hover {
-    color: #9b620d;
+    color: gold;
   }
 
 HEAD main {
@@ -96,7 +96,12 @@ h2 {
   }
 
 .quote {
-  color: #f5d133;
+  color: gold;
+  font-size: x-large;
+}
+#tolkien.quote {
+  color: gold;
+  font-size: x-large;
 }
 // #favoritesModal {
 //   color: #f5d133;
@@ -220,7 +225,6 @@ h2 {
   color: black;
   font-size: medium;
   font-weight: 200;
- 
 
   .nav-left {
     align-items: flex-end;

@@ -53,6 +53,8 @@
       <!-- Modal end -->
     <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
       <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
+      <br>
+      <a id="weather" href="https://www.theweathernetwork.com/us/weather/maryland/middle-earth" target="_blank">See details</a>
     </div>
     <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
     <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
