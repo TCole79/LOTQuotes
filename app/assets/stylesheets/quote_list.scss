@@ -56,14 +56,16 @@ font-weight: 700;
   font-style: italic;
   font-size: large;
   font-weight: 900;
+  font-size:x-large;
   
 }
 
 .char-list-id { 
   font-style: italic;
   filter: opacity(0.5);
-  font-size: medium;
+  font-size: x-large;
   font-weight: 900;
+
 }
 
 .char-main {
@@ -92,3 +94,27 @@ h1.char-name{
   font-weight: 900;
 }
 
+.back-tick {
+  color:rgb(156, 6, 6)
+}
+
+
+.legolas-pic {
+  width: 600px;
+}
+
+.gimli-pic {
+  width:500px;
+}
+
+.gandalf-pic {
+  width:500px;
+}
+
+.aragorn-pic{
+  width:500px;
+}
+
+.sauron-pic {
+  width: 500px;
+}

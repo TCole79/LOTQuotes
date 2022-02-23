@@ -1,39 +1,33 @@
-<body class= "B-main">
+<body class= "B-body">
 
-<main>
-<div class="char-main">
+<main class= "B-main">
 
-<div class="char-list-id">
+<h1 class="char-name">Legolas</h1>
 
-<% @legolasQuotes.each do |quote,index| %>
+<div class="char-main"> 
 
-  <div id="<%= dom_id quote %>">
-  <p>
- 
-    <%= quote.quote_content %>
-  </p>
+  <div class="char-list-id">
 
-  <p>
-    <br>
-    <br>
-    <br>
+    <% @legolasQuotes.each do |quote,index| %>
+
+      <div id="<%= dom_id quote %>">
+        <p><%= quote.quote_content %></p>
   
-</div>
+      </div>
 
 
+  <br>
+  <br>
+ 
  <% end %>
- 
- <%= link_to "Back", quotes_list_path %>
+ <%= link_to "Back", quotes_list_path, class: "back-tick" %>
+  </div>
 
- </div>
-  
- <div class= "char-portrait">
- <%= image_tag "gandalf2.png" %>
-
-
+ <div class= "char-portrait"> 
+ <img id="image" class= "legolas-pic" src="<%= asset_path("legolas3.png") %>" >
 </div>
 
-
+ 
 
  </main>
 
