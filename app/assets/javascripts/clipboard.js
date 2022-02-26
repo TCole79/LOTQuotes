@@ -6,6 +6,6 @@ const copyToClipboard = function () {
     $("#toasty").toast("show");
     setTimeout(() => {
       $("#toasty").toast("hide");
-    }, 3000);
+    }, 3500);
   });
 };

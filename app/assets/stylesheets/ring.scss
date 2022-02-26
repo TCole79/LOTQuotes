@@ -14,7 +14,7 @@
   z-index: 1;
 }
 .rotate2 {
-  margin-top:50px;
+  margin-top: 50px;
   width: 900px;
   filter: hue-rotate(0deg);
   transition: filter 30s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .rotate3 {
-  margin-top:80px;
+  margin-top: 80px;
   width: 900px;
   filter: hue-rotate(330deg);
   animation: rotation 120s infinite linear;
@@ -40,10 +40,10 @@
 }
 
 .rotate7 {
-  margin-top:50px;
+  margin-top: 50px;
   width: 700px;
   filter: hue-rotate(359deg);
-  filter:brightness(100%);
+  filter: brightness(100%);
   transition: filter 30s ease-in-out;
   animation: rotation 120s infinite linear;
   z-index: 1;

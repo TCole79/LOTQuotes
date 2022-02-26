@@ -1,33 +1,32 @@
-.formA {  
-  border:1px solid black;
+.formA {
+  border: 1px solid black;
 }
 
-.create-form { 
+.create-form {
   display: flex;
   justify-content: center;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;  
-  border:1px solid black;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border: 1px solid black;
   padding: 50px;
   transform: translateY(-18%);
-  top:50%;
+  top: 50%;
   position: absolute;
   z-index: 3;
 }
 
-
-.subtitle-create{
-font-family: "MorrisRom";
-font-size: large;
+.subtitle-create {
+  font-family: "MorrisRom";
+  font-size: large;
 }
 
 .form-tile {
   text-align: center;
   font-family: "MorrisRom";
-  font-size:40px;
+  font-size: 40px;
 }
 
 .sub-button-create {
-  border:1px solid green 
+  border: 1px solid green;
 }
 
 .create-a-quote {
@@ -35,26 +34,26 @@ font-size: large;
 }
 
 .input-quote {
-  width:100%;
+  width: 100%;
   border: none;
   border-bottom: 2px solid black;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;  
-  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .create-form input[type="submit"] {
-border-radius: 5px;
-background-color: white;  
-font-family: "MorrisRom";
-font-size:larger;
-
+  border-radius: 5px;
+  background-color: white;
+  font-family: "MorrisRom";
+  font-size: larger;
 }
 
 .create-form input[type="submit"]:hover {
   background-color: goldenrod;
-  color:whitesmoke;
+  color: whitesmoke;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 217, 0, 0.966), 0 0 10px rgba(255, 238, 0, 0.966), 0 0 15px rgba(255, 230, 0, 0.973), 0 2px 0 rgba(230, 207, 8, 0.979);
+  box-shadow: 0 0 5px rgba(255, 217, 0, 0.966),
+    0 0 10px rgba(255, 238, 0, 0.966), 0 0 15px rgba(255, 230, 0, 0.973),
+    0 2px 0 rgba(230, 207, 8, 0.979);
   border: 2px solid goldenrod;
 }
 

@@ -1,33 +1,38 @@
 //// custom settings for the About Page content ////
 .about {
-  display:flex;
+  display: flex;
   justify-content: center;
-  //flex-direction:  row;
-  flex-wrap:       wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
 }
-  .about-button {
-    display:flex;
-    justify-content: center;
-    //font-family:"Moria";
-    z-index: 99999;
-    pointer-events: auto;
-    font-family: Aniron;
-    
+.about-button {
+  display: flex;
+  justify-content: center;
+  z-index: 99999;
+  pointer-events: auto;
+  font-family: Aniron;
+}
+.about-button:hover {
+  font-family: "Aniron";
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  pointer-events: auto;
+}
+// Add animation (fade in the button text change)
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .about-button:hover {  
-    font-family: "Aniron";
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-    pointer-events: auto;
+  to {
+    opacity: 1;
   }
-  // Add animation (fade in the button text change)
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+  to {
+    opacity: 1;
   }
+}

@@ -1,35 +1,19 @@
 <body class= "B-body">
-
 <main class= "B-main">
-
 <h1 class="char-name">Sauron</h1>
-
 <div class="char-main"> 
-
   <div class="char-list-id">
-
     <% @sauronQuotes.each do |quote,index| %>
-
       <div id="<%= dom_id quote %>">
         <p><%= quote.quote_content %></p>
-  
       </div>
-
-
   <br>
   <br>
- 
- <% end %>
- <%= link_to "Back", quotes_list_path, class: "back-tick" %>
+<% end %>
+<%= link_to "Back", quotes_list_path, class: "back-tick" %>
   </div>
-
- <div class= "char-portrait"> 
- <img id="image" class="sauron-pic" src="<%= asset_path("sauron2.png") %>" >
+  <div class= "char-portrait"> 
+  <img id="image" class="sauron-pic" src="<%= asset_path("sauron2.png") %>" >
 </div>
-
- 
-
- </main>
-
+</main>
 </body>
-

@@ -17,8 +17,8 @@ module ApiHelper
     end
   end
   
-  def tolkien_random_api 
   # Tolkien API request code here for RANDOM quotes
+  def tolkien_random_api 
     @tolkien_url = 'https://tolkien-api.herokuapp.com/Quotes/random'
     @uri2 = URI(@tolkien_url)
     @response2 = Net::HTTP.get(@uri2)
@@ -31,8 +31,8 @@ module ApiHelper
     end
   end
 
-  def tolkien_character_api (name = "Aragorn")
   # Tolkien API request code here for CHARACTER specific quotes
+  def tolkien_character_api (name = "Aragorn")
     @tolkien_url2 = "https://tolkien-api.herokuapp.com/Quotes/by/#{name}"
     @uri3 = URI(@tolkien_url2)
     @response3 = Net::HTTP.get(@uri3)

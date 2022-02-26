@@ -1,12 +1,9 @@
 <h1>Registration</h1>
-
 <div class="main-ring">
 <img id="image" class="rotate" src="<%= asset_path('ring2.png') %>" >
   <div class="centered-register">
-    
     <tr class= "reg-table">
       <%= form_with model: @user, url: sign_up_path do |f|  %>
-        
         <div>
         <%= f.label :username, style: "display: block" %>
         <%= f.text_field :name %>
@@ -30,12 +27,8 @@
         <div>
         <%= f.submit "Sign Up" %>
         </div>
-
       <% end %>
     <%= render "layouts/flash" %>
     </tr>
-    
   </div>  
-
 </div>
-

@@ -35,52 +35,47 @@
 }
 @font-face {
   font-family: "MorrisRom";
-  src:url("MorrisRom")
+  src: url("MorrisRom");
 }
 //// custom fonts end ////
 
-main.main-page{
-  margin-top: 120px;
+main.main-page {
+  margin-top: 50px;
   margin-left: 50px;
-  margin-right:50px;
+  margin-right: 50px;
   margin-bottom: 50px;
 }
 
-main.B-main{
+main.B-main {
   margin-top: 50px;
   margin-left: 50px;
-  margin-right:50px;
-
+  margin-right: 50px;
 }
-
 
 a {
   color: black;
 }
-  a:hover {
-    color: gold;
-  }
+a:hover {
+  color: gold;
+}
 
 HEAD main {
   margin-top: 400px;
 }
 
-
 body.main-pages {
-  
   background-image: url(background6.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 100px;
-
 }
 
-body.B-body { 
+body.B-body {
   background-color: rgb(230, 221, 211);
   margin-bottom: 100px;
 }
 
-body.B-main { 
+body.B-main {
   background-color: rgb(230, 221, 211);
 }
 
@@ -89,18 +84,12 @@ h1 {
   display: flex;
   justify-content: center;
 }
-  // h1:hover {
-  //   font-family: "Moria";
-  // }
 
 h2 {
   font-family: "Aniron";
   display: flex;
   justify-content: center;
 }
-  h2:hover {
-    font-family: "Moria";
-  }
 
 .quote {
   color: gold;
@@ -110,9 +99,7 @@ h2 {
   color: gold;
   font-size: x-large;
 }
-// #favoritesModal {
-//   color: #f5d133;
-// }
+
 .generate-button-div {
   display: flex;
   justify-content: center;
@@ -120,11 +107,6 @@ h2 {
   justify-content: space-evenly;
   z-index: 2;
 }
-
-/*
-.generate-button-div:hover {  
-  font-family:"Moria",
-} */
 
 //// Container holding the About image and the text ////
 .container {
@@ -138,8 +120,7 @@ h2 {
   bottom: 8px;
   left: 16px;
   color: whitesmoke;
-  font-family: 'Aniron';
-
+  font-family: "Aniron";
 }
 /* Top left text */
 .top-left {
@@ -199,10 +180,7 @@ h2 {
   font-family: "Aniron";
   padding: 30px;
   color: goldenrod;
-  
-
 }
-
 
 .navbar {
   background-color: white;
@@ -210,7 +188,7 @@ h2 {
   //background-image: url("fellowship-5638589_1920.png");
   background-repeat: repeat-x;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
   overflow: hidden;
   //background-color: #333;
   position: sticky; /* Set the navbar to fixed position */
@@ -223,7 +201,6 @@ h2 {
   padding-left: 10px;
   padding-right: 10px;
   pointer-events: auto;
-  //background-image: url('fluffy3-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

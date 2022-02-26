@@ -1,22 +1,14 @@
 <body class= "B-body">
 <br>
 <br>  
-
 <h1 class= "create-a-quote">Create a new Quote</h1>
 <%= link_to "Quotes", quotes_list_path, class: "see-quotes" %>
-
-
 <div class="main-ring2">
-  
   <img class="rotate7" src="<%= asset_path('ring5.png') %>" >
-
     <div class= "create-form">
       <%= render "form", quote: @quote, class: "formA" %>
     </div>
 </div>
 </div>
-
 <br>
-
- 
 </body>

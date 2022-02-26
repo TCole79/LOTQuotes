@@ -1,11 +1,6 @@
-
-
 <body class= "B-body">
-
   <main class= "B-main">
     <div class="char-list">
-
-
     <div class "char-box" class="bilbo">
     <div>
     <%= link_to quotes_list_bilbo_path do %>
@@ -16,8 +11,6 @@
       <%= link_to "Bilbo Baggins", quotes_list_bilbo_path  %>
       </div>
     </div>
-
-
     <div class "char-box" class="aragorn">
     <div>
     <%= link_to quotes_list_aragorn_path do %>
@@ -51,8 +44,6 @@
     </div>
     </div>  
 
-
-
     <div class "char-box" class= "gimli">
     <div>
     <%= link_to quotes_list_gimli_path do %>
@@ -85,19 +76,12 @@
     <%= link_to "Gollum", quotes_list_gollum_path %>
     </div>
     </div>  
-
     </div>
     <br>
     <br>
-
     <h1 class= "list-title">Whispers of Middle Earth</h1>
-
     <br>
-
-
-
     <div class="list-quotes">
-
       <% @quotes.each do |quote,index| %>
         <div id="<%= dom_id quote %>">
       <p>
@@ -106,17 +90,9 @@
       <p>
         <%= quote.quote_author %>
       </p>
-
       </div>
-        
         <br>
-      
       <% end %>
-
-
     <%= link_to "New quote", new_quote_path %>
   </main>
-
-
-
 </body>

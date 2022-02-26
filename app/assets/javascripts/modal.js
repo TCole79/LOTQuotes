@@ -46,11 +46,10 @@ $(document).ready(function (e) {
       console.log("val test", copyID);
       navigator.clipboard.writeText(copyID).then(() => {
         // Alert the user that the action took place.
-        //alert("Copied to clipboard");
         $("#toasty").toast("show");
         setTimeout(() => {
           $("#toasty").toast("hide");
-        }, 3000);
+        }, 3500);
       });
     });
   });

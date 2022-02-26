@@ -50,7 +50,7 @@ $(document).ready(function () {
       $(".favorite").show();
     }
   }
-
+  // add to favorite in local storage when clicked
   $(".favorite").on("click", (event) => {
     let arr = localStorage.getItem("favorite");
     let favoriteQuotes = localStorage.getItem("favoriteQuotes");
@@ -74,7 +74,7 @@ $(document).ready(function () {
     $(".unFavorite").show();
     $(".favorite").hide();
   });
-
+  // remove from favorite in local storage when clicked
   $(".unFavorite").on("click", (event) => {
     let arr = localStorage.getItem("favorite");
     let favoriteQuotes = localStorage.getItem("favoriteQuotes");

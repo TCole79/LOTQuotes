@@ -1,6 +1,6 @@
 //// custom blurred glass and background effect for css for the modal ////
 .modal {
-  background-color: rgba(255, 255, 255, .15);  
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   color: black;
 }
@@ -8,16 +8,13 @@
   background-image: url(fellowship.png);
   background-repeat: repeat-x;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
 }
 #favoritesModal:hover {
   color: #fff;
   background-color: #027de7;
 }
-// #fetch:hover {
-//   color: #fff;
-//   background-color: #027de7;
-// }
+
 #aboutReturn:hover {
   color: #fff;
   background-color: #027de7;
@@ -26,10 +23,3 @@
   color: #fff;
   background-color: #027de7;
 }
-#weather:hover {
-  color: #fff;
-  background-color: #027de7;
-}
-// <div class="about-button" style="color:white" > <%= link_to "Return to Main", root_path, id: 'aboutReturn' %></div>
-// <br>
-// <a id="weather" href="https://www.theweathernetwork.com/us/weather/maryland/middle-earth" target="_blank">See details</a>

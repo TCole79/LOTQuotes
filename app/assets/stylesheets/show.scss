@@ -1,6 +1,6 @@
-.quote-id{
-  margin-left:0;
-  margin-right:0;
+.quote-id {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .show-page {
@@ -10,19 +10,17 @@
 }
 
 .show-icons {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  margin-left:35%;
-  margin-right:35%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
-
 .show-quote {
-  font-family:"Aniron";
+  font-family: "Aniron";
   font-size: larger;
   font-style: bold;
 }
-
 
 .delete-icon {
   text-align: center;
@@ -30,29 +28,27 @@
   justify-content: center;
 }
 
-
 .edit-icon {
   border: 2px solid rgb(245, 172, 3);
-  border-spacing:10px; 
-  border-radius:5px;
+  border-spacing: 10px;
+  border-radius: 5px;
   padding: 5px;
-  color:rgb(185, 131, 3);
-  font-style: bold ;
+  color: rgb(185, 131, 3);
+  font-style: bold;
   background-color: rgb(238, 221, 182);
 }
 
 .back-icon {
-  border:solid 2px rgb(58, 94, 5);  
+  border: solid 2px rgb(58, 94, 5);
   padding: 5px;
-  border-radius:5px;
+  border-radius: 5px;
   color: rgb(58, 94, 5);
   font-style: bold;
-  background-color:rgb(169, 182, 149) ;
-
+  background-color: rgb(169, 182, 149);
 }
 .back-icon:hover {
   background-color: rgb(58, 94, 5);
-  color:white;
+  color: white;
 }
 
 .edit-icon:hover {
@@ -61,20 +57,19 @@
 }
 
 .walk-pic {
-  filter:opacity(0.5);
-  width:100%;
-  bottom:0%;
+  filter: opacity(0.5);
+  width: 100%;
+  bottom: 0%;
 }
 
 .btn-outline-danger {
   font-style: bold;
-  border:2px solid red;
+  border: 2px solid red;
   background-color: rgb(240, 200, 200);
 }
 
 .create-notice {
   display: flex;
   justify-content: center;
-  color:green;
+  color: green;
 }
-
