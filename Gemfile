@@ -5,7 +5,6 @@ ruby "2.7.0"
 
 gem "acts_as_favoritor", github: "jonhue/acts_as_favoritor"
 
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
@@ -32,10 +31,8 @@ gem "jbuilder"
 
 gem "rack-cors"
 
-# Tristan added this for the API call
 gem "json"
 
-# Tristan added this for the copy to clipboard functionality
 gem "clipboard"
 
 # Use Redis adapter to run Action Cable in production
@@ -53,13 +50,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Sass to process CSS - Tristan added this section lines 45-49
-# gem "sassc-rails"
-gem 'bootstrap-sass'
-# Use SCSS for stylesheets
 gem 'sassc-rails'
 
-# TC added to make the modals work
+# Added to make the modals work
 gem 'bootstrap', '~> 5.1.3'
 gem 'popper_js'
 
@@ -68,7 +61,6 @@ gem 'popper_js'
 gem 'jquery-rails'
 
 gem "font-awesome-rails"
-
 gem 'font-awesome-sass'
 
 group :development, :test do
