@@ -24,14 +24,14 @@ It is based on J.R.R. Tolkien's Lord of the Rings novels and movies.
 
 * Some pictures
 
-![Main page logged in as Admin](link here)
+![Main page logged in as Admin](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Main%20page%20logged%20in%20as%20Admin.png)
 
-![Specific Quotes](link here)
+![Specific Quotes](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Specific%20quotes.png)
 
-![Project Quote](link here)
+![Project Quote](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Project%20quote.png)
 
-![Favorites](link here)
+![Favorites](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Favorites.png?raw=true)
 
-![Quote List](link here)
+![Quote List](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Quote%20list.png)
 
-![Ticker, Weather, Holiday links](link here)
+![Ticker, Weather, Holiday links](https://github.com/TCole79/LOTQuotes/blob/main/app/assets/images/screenshots/Ticker%2C%20Weather%2C%20Holiday%20functions.png)
