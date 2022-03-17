@@ -4,95 +4,95 @@
 <%= javascript_include_tag('modal.js') %>
 
 <body class= "main-pages">
-<main class= "main-page">
+  <main class= "main-page">
 
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<h1>The Lord of the Quotes</h1>
-<br>
-<h2>What has Middle Earth been saying? </h2>
+  <h1>The Lord of the Quotes</h1>
+  <br>
+  <h2>What has Middle Earth been saying? </h2>
 
-<div class="main-ring">
-  <div class="container">
-  <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
-    <div class="bottom-left"> <b>Great Travel Deal!!!</b><br>
-      <%= link_to'https://www.hobbitontours.com/', target: :_blank  do %>
-        <p> See Hobbiton!! </p>
-      <% end %>
-    </div>
-    <div class="top-left"> Choose quotes by character:
-      <form>
-        <select>
-          <option disabled hidden selected>Select</option>
-          <option value="Aragorn">Aragorn</option>
-          <option value="Boromir">Boromir</option>
-          <option value="Celeborn">Celeborn</option>
-          <option value="Elrond">Elrond</option>
-          <option value="Faramir">Faramir</option>
-          <option value="Gandalf">Gandalf</option>
-        </select>
-          <button type="button" class="fetch-specific-quote" style="color:black; background-color:transparent; border: none" >Fetch a Quote!</button>
-      </form>
-    </div>
-    <div class="top-right quoteByAuthor"> 
-    <!-- Button trigger modal -->
-      <button type="button" id="favoritesModal" class="btn btn-transparent"> <%=fa_icon "star" %> Favourites</button>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body"></div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <div class="main-ring">
+    <div class="container">
+    <img id="image" class="rotate2" src="<%= asset_path("ring2.png") %>" >
+      <div class="bottom-left"> <b>Great Travel Deal!!!</b><br>
+        <%= link_to'https://www.hobbitontours.com/', target: :_blank  do %>
+          <p> See Hobbiton!! </p>
+        <% end %>
+      </div>
+      <div class="top-left"> Choose quotes by character:
+        <form>
+          <select>
+            <option disabled hidden selected>Select</option>
+            <option value="Aragorn">Aragorn</option>
+            <option value="Boromir">Boromir</option>
+            <option value="Celeborn">Celeborn</option>
+            <option value="Elrond">Elrond</option>
+            <option value="Faramir">Faramir</option>
+            <option value="Gandalf">Gandalf</option>
+          </select>
+            <button type="button" class="fetch-specific-quote" style="color:black; background-color:transparent; border: none" >Fetch a Quote!</button>
+        </form>
+      </div>
+      <div class="top-right quoteByAuthor"> 
+      <!-- Button trigger modal -->
+        <button type="button" id="favoritesModal" class="btn btn-transparent"> <%=fa_icon "star" %> Favourites</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Your Favourite Quotes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- Modal end -->
+      <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
+        <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
+        <br>
+        <a id="weather" href="https://www.theweathernetwork.com/us/weather/maryland/middle-earth" target="_blank">See details</a>
       </div>
-      <!-- Modal end -->
-    <div class="bottom-right">Current Weather in<br> <strong>Middle Earth</strong>, Maryland: <br>
-      <%= @weather['weather'][0]['description'].titlecase %> <br> <%= @weather['main']['temp'] %> &#8451
+      <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
+      <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
+        <div class="generate-button-div" > 
+        <button class="generate-button" style="color:gold; background-color:transparent; border:none"> Random Quote! </button>
+        <a href="#" data-quote-id=<%= @tolkien['id'] %> class="favorite" style="color:gold"><%=fa_icon "star" %> Favorite </a>
+        <a href="#" class="unFavorite" style="color:white"> Un Favorite </a>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <br>
+  <!-- Ticker start -->
+  <div class="container">
+    <div class="ticker">
+      <div class="title"><h5>Breaking ME News</h5></div>
+        <div class="news">
+          <marquee>
+            <p>
+            Sauron wins Mordor general election with 98.5% of the votes  ///  Hobbit's win Curling Gold Medal at ME Winter Olympics, coach attributes success to "being low to the ground."  ///  Exclusive interview with the Balrog tonight at 9pm, "I'm just misunderstood."  ///  Minas Tirith FC win the Champion's League final 3-2 against Isengard  ///  Rohan Derby mired in controversy after Elvish team, Valaya's Breath, accused of using magic  ///  The Epic Dwarven Brewery Tour will include Khazad-dûm for first time since 2993  ///  Farmers in the Westfold grow a 2708lb pumpkin, beating the famed Farmer Maggot's Guinness Book of ME Records entry of 3025  ///  Goblin factory workers unionize, spokesman releases statement, "Nah dis is fair, innit."  ///  The Nazghul Nine Ballet House announce Middle Earth tour ~ tickets sell out immediately  ///  Weathertop Restoration Fund reaches it's crowdfunding target after mysterious benefactor donates a set of mithril armour  ///  Cave Troll sanctuary in the Misty Mountains set to open summer this year  ///  Final Palantir recovered in a garage sale in Dale, owner say's "We used it as a paperweight for years."  ///  Prancing Pony celebrates its 50th year of operation with a limited run of themed beer steins  ///  Entwives reportedly sighted on the west bank of a southern bow of the river Carnen, flowing into the Sea of Rhûn
+            </p>
+          </marquee>
+        </div>
+      </div>
       <br>
-      <a id="weather" href="https://www.theweathernetwork.com/us/weather/maryland/middle-earth" target="_blank">See details</a>
     </div>
-    <div class="centered"> <span id="tolkien" class="quote"> <%= @tolkien['text'] %> ~ <%= @tolkien['character'] %> </span>
-    <button class="btn-clipboard" onclick="copyToClipboard()" data-original-title="Copy to clipboard">Copy</button>
-      <div class="generate-button-div" > 
-      <button class="generate-button" style="color:gold; background-color:transparent; border:none"> Random Quote! </button>
-      <a href="#" data-quote-id=<%= @tolkien['id'] %> class="favorite" style="color:gold"><%=fa_icon "star" %> Favorite </a>
-      <a href="#" class="unFavorite" style="color:white"> Un Favorite </a>
-      </div>
-    </div>
-  </div> 
-</div>
-<br>
-<!-- Ticker start -->
-<div class="container">
-  <div class="ticker">
-    <div class="title"><h5>Breaking ME News</h5></div>
-      <div class="news">
-        <marquee>
-          <p>
-          Sauron wins Mordor general election with 98.5% of the votes  ///  Hobbit's win Curling Gold Medal at ME Winter Olympics, coach attributes success to "being low to the ground."  ///  Exclusive interview with the Balrog tonight at 9pm, "I'm just misunderstood."  ///  Minas Tirith FC win the Champion's League final 3-2 against Isengard  ///  Rohan Derby mired in controversy after Elvish team, Valaya's Breath, accused of using magic  ///  The Epic Dwarven Brewery Tour will include Khazad-dûm for first time since 2993  ///  Farmers in the Westfold grow a 2708lb pumpkin, beating the famed Farmer Maggot's Guinness Book of ME Records entry of 3025  ///  Goblin factory workers unionize, spokesman releases statement, "Nah dis is fair, innit."  ///  The Nazghul Nine Ballet House announce Middle Earth tour ~ tickets sell out immediately  ///  Weathertop Restoration Fund reaches it's crowdfunding target after mysterious benefactor donates a set of mithril armour  ///  Cave Troll sanctuary in the Misty Mountains set to open summer this year  ///  Final Palantir recovered in a garage sale in Dale, owner say's "We used it as a paperweight for years."  ///  Prancing Pony celebrates its 50th year of operation with a limited run of themed beer steins  ///  Entwives reportedly sighted on the west bank of a southern bow of the river Carnen, flowing into the Sea of Rhûn
-          </p>
-        </marquee>
-      </div>
-    </div>
-    <br>
   </div>
-</div>
-    <!-- Ticker end -->
-<!-- Toast start -->
-<div class="toast" id="toasty" style="position: absolute; top: 50%; right: 50%; transform: translateX(50%);" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header" style="color: #9b620d;">
-    <strong class="mr-auto">Copied to clipboard!</strong>
+      <!-- Ticker end -->
+  <!-- Toast start -->
+  <div class="toast" id="toasty" style="position: absolute; top: 50%; right: 50%; transform: translateX(50%);" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header" style="color: #9b620d;">
+      <strong class="mr-auto">Copied to clipboard!</strong>
+    </div>
+    <div class="toast-body"></div>
   </div>
-  <div class="toast-body"></div>
-</div>
-<!-- Toast end -->
-</main>
+  <!-- Toast end -->
+  </main>
 </body>

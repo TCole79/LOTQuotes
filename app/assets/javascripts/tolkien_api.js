@@ -3,12 +3,12 @@ $(document).ready(function () {
 
   let quoteId = $(".favorite").data("quote-id");
   let quote = {};
-  console.log("quoteId", quoteId);
+  // console.log("quoteId", quoteId);
 
   $(".generate-button").on("click", function () {
-    
+    // using XMLHttpRequest allows us to retrieve data from a URL without doing a full page refresh, only updating one small part - the quotes on screen
     let request = new XMLHttpRequest();
-
+    // .open initializes a newly created request, or re-initializes an existing one
     request.open("GET", "http://localhost:3000/tolkien", true);
 
     request.onload = function () {

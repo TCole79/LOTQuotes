@@ -1,4 +1,4 @@
-module ApiHelper
+module ApiHelper 
 
   require 'net/http' 
   require 'json'
@@ -37,7 +37,6 @@ module ApiHelper
     @uri3 = URI(@tolkien_url2)
     @response3 = Net::HTTP.get(@uri3)
     @tolkien_output2 = JSON.parse(@response3)
-    # @tolkien_output2.shuffle.first
     # checking for empty return results
     if @tolkien_output2.empty?
       @tolkien_output2 = "Error"

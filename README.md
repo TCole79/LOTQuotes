@@ -3,14 +3,14 @@
 The Lord of the Quotes is an education project completed as part of the Lighthouse Labs Web Development and Coding bootcamp.
 It is based on J.R.R. Tolkien's Lord of the Rings novels and movies.
 
-* Important information:
+Important information
 
 * Project Features
-  API calls to a Tolkien API, and Openweather
-  User authentication for creating, editing, and deleting quotes
-  Standard users have the functionality to favourite quotes, with those choices saved to LocalStorage for the session
-  Using bcrypt for hasing and storing passwords
-  Using encrypted cookies for each user session for additional security
+  API calls to a Tolkien API, and Openweather /
+  User authentication for creating, editing, and deleting quotes /
+  Standard users have the functionality to favourite quotes, with those choices saved to LocalStorage for the session /
+  Using bcrypt for hasing and storing passwords /
+  Using encrypted cookies for each user session for additional security /
 
 * System dependencies
   Ruby 2.7.0
